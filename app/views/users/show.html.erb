@@ -1,11 +1,14 @@
 <div class="bodywrapper">
 <br>
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
 
 <p>
+  <%= profile_image_for(@current_user) %>
+  <br>
+  <strong>Name:</strong>
+  <%= @user.name %><br>
+
+
+
   <strong>Email:</strong>
   <%= @user.email %>
 </p>
