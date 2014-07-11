@@ -1,0 +1,29 @@
+<div class="bodywrapper">
+<h3 id='storyheader'>Listing users</h3>
+
+
+
+<table>
+  <thead>
+    <tr class="liner">
+      <th>Name</th>
+      <th>Email</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= link_to user.name, user %></td>
+        <td><%= user.email %></td>
+        <td> <%= link_to 'Edit', edit_user_path(user) %> |
+         <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<%= link_to 'New User', new_user_path, class: "button tiny radius" %>
+</div>

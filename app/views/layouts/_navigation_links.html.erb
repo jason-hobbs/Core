@@ -1,2 +1,9 @@
 <!-- <li class="divider"></li> -->
-<li class="shadow"><%= link_to "Dashboard", dashboards_path %></li>
+<!-- <li class="divider"></li> -->
+<% if session[:user_id] %>
+  <li class="shadow"><%= link_to 'Dashboard', dashboards_path %></li>
+  <li class="shadow"><%= link_to profile_image_for(@current_user, size: 35) + ' ' + @current_user.name, @current_user %></li>
+
+<% else %>  
+  <li class="shadow"><%= link_to 'Sign In', new_session_path %></li>
+<% end %>

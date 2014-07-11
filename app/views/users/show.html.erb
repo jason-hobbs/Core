@@ -1,0 +1,18 @@
+<div class="bodywrapper">
+<br>
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user), class: "button tiny radius" %>
+<%= link_to 'Logout', logout_path, method: :delete, :class => "button tiny radius" %>
+<% if current_user_admin? %>
+  <%= link_to 'All Users', users_path, class: "button tiny radius" %>
+<% end %>
+</div>

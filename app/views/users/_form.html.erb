@@ -1,0 +1,55 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this User from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<div class="row left">
+  <div class="small-12 columns">
+    <%= f.label "User Name", class: "bold" %><br>
+    <%= f.text_field :name, :size=>"50", class: "radius entry" %>
+  </div>
+</div>
+
+
+<div class="row left">
+  <div class="small-12 columns">
+    <%= f.label "User Email", class: "bold" %><br>
+    <%= f.text_field :email, class: "radius entry" %>
+  </div>
+</div>
+
+<div class="row left">
+  <div class="small-12 columns">
+    <%= f.label "Password", class: "bold" %><br>
+    <%= f.password_field :password, class: "radius entry" %>
+  </div>
+</div>
+
+<div class="row left">
+  <div class="small-12 columns">
+    <%= f.label "Password Confirmation", class: "bold" %><br>
+    <%= f.password_field :password_confirmation, class: "radius entry" %>
+  </div>
+</div>
+
+
+<div class="row left">
+  <div class="small-12 columns">
+  <% if @user.new_record? %>
+    <%= f.submit "Create User", class: 'button tiny radius' %>
+  <% else %>
+    <%= f.submit "Update Account",  class: 'button tiny radius' %>
+  <% end %>
+
+
+
+<% end %>

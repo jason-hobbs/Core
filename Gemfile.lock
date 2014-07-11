@@ -28,6 +28,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    bcrypt (3.1.7)
     brakeman (2.6.1)
       erubis (~> 2.6)
       fastercsv (~> 1.5)
@@ -54,6 +55,7 @@ GEM
     foundation-rails (5.3.0.1)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
+    gritter (1.1.0)
     haml (4.0.5)
       tilt
     highline (1.6.21)
@@ -143,10 +145,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   brakeman
   cancan
   coffee-rails (~> 4.0.0)
   foundation-rails
+  gritter
   jbuilder (~> 2.0)
   jquery-rails
   pg

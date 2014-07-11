@@ -17,11 +17,10 @@
     <header>
       <%= render 'layouts/navigation' %>
     </header>
-    <%= render 'layouts/messages' %>
-
-
-    <%= yield %>
+    <main role="main">
+      <%= yield %>
+    </main>
     <%= javascript_include_tag "application" %>
-
+    <%= render 'layouts/messages' %>
   </body>
 </html>
