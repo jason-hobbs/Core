@@ -24,7 +24,7 @@ class ApplicationController < ActionController::Base
 
   def require_admin
     unless current_user_admin?
-      redirect_to root_url, :gflash => {:alert => "Unauthorized access!"}
+      redirect_to root_url, :gflash => {:warning => "Unauthorized access!"}
     end
   end
 

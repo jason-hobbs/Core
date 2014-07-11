@@ -10,7 +10,7 @@ end
 
 def new
   if current_user
-    redirect_to @user, notice: "already signed in!"
+    redirect_to @user, :gflash => { :notice => "Already signed in" }
   end
 	@user=User.new
 
@@ -24,7 +24,7 @@ def create
   		@user = User.new(user_params)
   		if @user.save
 		    session[:user_id] = @user.id
-    		redirect_to @user, notice: "Thanks for signing up! Click edit to add sites to start tracking! Then click dashboard on the top navigation bar!  You can also go to Gravatar.com to upload your avatar pic."
+    		redirect_to @user, :gflash => { :success => "Welcome!" }
   		else
     		render :new
   		end
@@ -49,7 +49,7 @@ def create
   		@user = User.find(params[:id])
   		@user.destroy
   		session[:user_id] = nil
-  		redirect_to root_url, alert: "Account successfully deleted!"
+  		redirect_to root_url, :gflash => { :success => "Account deleted" }
 	end
 
 	private

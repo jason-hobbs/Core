@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
 
 			gflash :success => "Logged in"
-   		redirect_to(session[:intended_url] || dashboards_path)
+   		redirect_to(session[:intended_url] || root_path)
       session[:intended_url] = nil
   	else
   		gflash :now, :warning => "Invalid email/password combination!"
