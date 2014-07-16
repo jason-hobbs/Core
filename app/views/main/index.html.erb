@@ -4,12 +4,13 @@
 <div class="row columns">
   <div class="small-12 medium-6 columns">
     <h3 class="storyheader">Post</h3>
-      <% @posts.each do |post| %>
-        <div class="stream-instance">
-          <%= post.entry %>
-        </div>
+      <% if @posts %>
+        <% @posts.each do |post| %>
+          <div class="stream-instance">
+            <%= post.entry %>
+          </div>
+        <% end %>
       <% end %>
-
   </div>
 </div>
 
