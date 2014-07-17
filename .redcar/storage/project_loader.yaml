@@ -1,0 +1,4 @@
+--- 
+open_files: 
+  - app/controllers/application_controller.rb
+  - app/controllers/dashboards_controller.rb
