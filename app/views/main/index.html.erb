@@ -3,7 +3,7 @@
 <br>
 <div class="row columns">
   <div class="small-12 medium-6 columns">
-    <h3 class="storyheader">Post</h3>
+    <h3 class="storyheader"><%= link_to 'Post', new_group_post_path(@group) %></h3>
       <% if @posts %>
         <% @posts.each do |post| %>
           <div class="stream-instance">

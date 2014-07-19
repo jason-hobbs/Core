@@ -1,0 +1,35 @@
+<%= form_for [@group, @post] do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this User from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<div class="row left">
+  <div class="small-12 columns">
+    <h3 id='storyheader'>New Post</h3>
+    <%= f.text_field :entry, :size=>"50", class: "radius entry" %>
+  </div>
+</div>
+
+
+
+
+
+
+
+  </div>
+</div>
+
+<div class="row left">
+  <div class="small-12 columns">
+
+    <%= f.submit "Create Post", class: 'button tiny radius' %>
+<%end%>
