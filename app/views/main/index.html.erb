@@ -2,14 +2,29 @@
 
 <br>
 <div class="row columns">
-  <div class="small-12 medium-6 columns">
+  <div class="small-12 medium-8 columns">
     <h3 class="storyheader"><%= link_to 'Post', new_group_post_path(@group) %></h3>
       <% if @posts %>
+
+
+
+      <table>
+        
+
+        <tbody>
         <% @posts.each do |post| %>
-          <div class="stream-instance">
-            <%= post.entry %>
-          </div>
+          <tr>
+            <td><%= link_to post.title, [@group, post] %></td>
+            <td>tag</td>
+            <td><%= @user.name %></td>
+          </tr>
         <% end %>
+        </tbody>
+      </table>
+
+
+
+
       <% end %>
   </div>
 </div>

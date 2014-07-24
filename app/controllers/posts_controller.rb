@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :get_user
   before_action :get_group
   def new
-    
+
     @post = Post.new
   end
 
@@ -29,6 +29,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:entry)
+    params.require(:post).permit(:title, :entry)
   end
 end
