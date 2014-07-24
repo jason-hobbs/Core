@@ -2,21 +2,21 @@
 
 <br>
 <div class="row columns">
-  <div class="small-12 medium-8 columns">
+  <div class="small-12 columns">
     <h3 class="storyheader"><%= link_to 'Post', new_group_post_path(@group) %></h3>
       <% if @posts %>
 
 
 
       <table>
-        
+
 
         <tbody>
         <% @posts.each do |post| %>
           <tr>
-            <td><%= link_to post.title, [@group, post] %></td>
-            <td>tag</td>
-            <td><%= @user.name %></td>
+            <td width="70%"><%= link_to post.title, [@group, post] %></td>
+            <td width="10%">tag</td>
+            <td width="20%"><%= profile_image_for(@user, size: 25) + ' ' + @user.name %></td>
           </tr>
         <% end %>
         </tbody>
