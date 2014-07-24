@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+User.create(:name=>'Jason Hobbs', :email=>'grimmstede@feemon.com', :password=>'Testing1', :admin=>true)
+User.create(:name=>'Test User', :email=>'test@feemon.com', :password=>'Testing1', :admin=>false)
+Group.create(:name=>'main', :user_id=>'1')
