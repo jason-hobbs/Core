@@ -3,7 +3,7 @@
 <br>
 <div class="row columns">
   <div class="small-12 columns">
-    <h3 class="storyheader"><%= link_to 'Post', new_group_post_path(@group) %></h3>
+    <%= link_to '+   POST', new_group_post_path(@group), :class=>'post-button' %>
       <% if @posts %>
 
 

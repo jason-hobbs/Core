@@ -7,6 +7,9 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def show
+    fail
+  end
 
   def update
     fail
