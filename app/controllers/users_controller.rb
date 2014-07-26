@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :require_signin, except: [:new, :create]
   before_action :require_correct_user, only: [:edit, :update]
-  before_action :require_admin, only: [:destroy, :index]
+  before_action :require_admin, only: [:destroy, :index, :new, :create]
   before_action :get_user
 
 def index
@@ -10,7 +10,7 @@ end
 
 def new
   if current_user
-    redirect_to @user, :gflash => { :notice => "Already signed in" }
+    #redirect_to @user, :gflash => { :notice => "Already signed in" }
   end
 	@user=User.new
 
@@ -23,8 +23,8 @@ end
 def create
   		@user = User.new(user_params)
   		if @user.save
-		    session[:user_id] = @user.id
-    		redirect_to @user, :gflash => { :success => "Welcome!" }
+		    #session[:user_id] = @user.id
+    		redirect_to @user, :gflash => { :success => "Account Created" }
   		else
     		render :new
   		end
