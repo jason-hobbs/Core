@@ -18,6 +18,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.group_id = params[:group_id]
+    @post.user_id = @user.id
     if @post.save
       redirect_to root_path, :gflash => { :success => "Posted successfully" }
     else
