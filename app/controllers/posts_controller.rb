@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    fail
+    @post = Post.find(params[:id])
   end
 
   def update
