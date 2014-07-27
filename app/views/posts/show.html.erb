@@ -1,15 +1,23 @@
 <div class="bodywrapper">
 <br>
 <div class="row columns">
-  <div class="small-12 medium-6 columns">
-<%= @post.title %>
-</div>
+  <div class="small-12 medium-10 columns">
+    <h3 id="storyheader"><%= @post.title %></h3>
+    <hr>
+  </div>
 </div>
 
 <div class="row columns">
-  <div class="small-12 medium-6 columns">
-<%= raw(@post.entry) %>
-</div>
+  <div class="small-12 medium-10 columns ">
+    <div class="avatar">
+      <%= profile_image_for(@post.user, size: 35) %>
+    </div>
+    <div class="post-entry">
+      <strong><%= @post.user.name %></strong>
+      <br><br>
+      <%= raw(@post.entry) %>
+    </div>
+  </div>
 </div>
 
 
