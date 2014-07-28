@@ -15,6 +15,7 @@
 //= require foundation
 //= require turbolinks
 //= require gritter
+//= require ckeditor/init
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
