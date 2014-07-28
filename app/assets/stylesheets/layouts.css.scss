@@ -418,3 +418,9 @@ outline: none;
 .post-entry {
   margin-left: 45px;
 }
+
+.head {
+  display:  none;
+  z-index: 100;
+  background-color: red;
+}
