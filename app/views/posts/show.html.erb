@@ -1,6 +1,6 @@
 <div class="bodywrapper">
 <br>
-<div class="head">test</div>
+<div class="head">test<div class="dropper">Close</div></div>
 <div class="row columns">
   <div class="small-12 medium-10 columns">
     <h3 id="storyheader"><%= @post.title %></h3>
@@ -19,13 +19,8 @@
       <%= raw(@post.entry) %>
     </div>
     <br>
-    <%= link_to '+   REPLY', new_group_post_path(@group), :class=>'post-button' %>
+    <div class="post-button dropper">+ REPLY</div>
     <hr>
   </div>
 </div>
-
-<div class="dropper">test</div>
-
-
-
 </div>
