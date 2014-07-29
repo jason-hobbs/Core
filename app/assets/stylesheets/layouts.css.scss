@@ -64,6 +64,10 @@ body {
   text-shadow: black 0 1px 0;
 }
 
+.shadow-entry {
+  box-shadow: 0 0 3px rgba(0,0,0,.15);
+}
+
 .shadowadmin {
   color: red;
   text-shadow: black 0 1px 0;
@@ -385,6 +389,7 @@ outline: none;
 }
 
 .top-bar {
+  background: -webkit-gradient(linear, left top, left bottom, from(#505050), to(#343434));
   .name {
 
 
@@ -392,6 +397,10 @@ outline: none;
     font-size: 20px;
   }
 }
+}
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+  background: -webkit-gradient(linear, left top, left bottom, from(#505050), to(#343434));
 }
 
 
@@ -436,5 +445,5 @@ outline: none;
 }
 
 .spacer {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
