@@ -25,6 +25,7 @@ $('.dropper').click(function () {
         });
 
 
+
 $(document).ready(
     function() {
       $.extend($.gritter.options, {
@@ -32,4 +33,6 @@ $(document).ready(
             fade_out_speed: 100, // how fast the notices fade out
             time: 1500 // hang on the screen for...
           });
+
+          
 });
