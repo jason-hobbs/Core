@@ -34,5 +34,5 @@ $(document).ready(
             time: 1500 // hang on the screen for...
           });
 
-          
+
 });

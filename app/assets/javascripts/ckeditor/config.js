@@ -4,38 +4,37 @@
  */
 
 CKEDITOR.editorConfig = function( config ) {
+config.language = 'en';
+  config.filebrowserBrowseUrl = "/ckeditor/attachment_files";
+  config.filebrowserFlashBrowseUrl = "/ckeditor/attachment_files";
+  config.filebrowserFlashUploadUrl = "/ckeditor/attachment_files";
+  config.filebrowserImageBrowseLinkUrl = "/ckeditor/pictures";
+  config.filebrowserImageBrowseUrl = "/ckeditor/pictures";
+  config.filebrowserImageUploadUrl = "/ckeditor/pictures";
+  config.filebrowserUploadUrl = "/ckeditor/attachment_files";
 
-	// %REMOVE_START%
-	// The configuration options below are needed when running CKEditor from source files.
-	config.plugins = 'basicstyles,dialogui,dialog,clipboard,button,toolbar,enterkey,entities,floatingspace,wysiwygarea,indent,indentlist,fakeobjects,link,list,undo,image,blockquote';
-	// config.skin = 'bootstrapck';
-	// %REMOVE_END%
+		config.toolbar_Pure = [
+			'/', {
+				name: 'basicstyles',
+				items: ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat']
+			}, {
+				name: 'paragraph',
+				items: ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl']
+			}, {
+				name: 'links',
+				items: ['Link', 'Unlink']
+			}, '/', {
+				name: 'styles',
+				items: ['Styles', 'Format', 'Font', 'FontSize']
+			}, {
+				name: 'colors',
+				items: ['TextColor', 'BGColor']
+			}, {
+				name: 'insert',
+				items: ['Image', 'Table', 'HorizontalRule', 'PageBreak']
+			}
+		];
+		config.toolbar = 'Pure';
+		return true;
 
-	// Define changes to default configuration here.
-	// For complete reference see:
-	// http://docs.ckeditor.com/#!/api/CKEDITOR.config
-
-	// The toolbar groups arrangement, optimized for a single toolbar row.
-	config.toolbarGroups = [
-		{ name: 'document',	   groups: [ 'mode', 'document', 'doctools' ] },
-		{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },
-		{ name: 'editing',     groups: [ 'find', 'selection', 'spellchecker' ] },
-		{ name: 'forms' },
-		{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
-		{ name: 'paragraph',   groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ] },
-		{ name: 'links' },
-		{ name: 'insert' },
-		{ name: 'styles' },
-		{ name: 'colors' },
-		{ name: 'tools' },
-		{ name: 'others' },
-		{ name: 'about' }
-	];
-
-	// The default plugins included in the basic setup define some buttons that
-	// are not needed in a basic editor. They are removed here.
-	config.removeButtons = 'Save,About,Preview,New';
-
-	// Dialog windows are also simplified.
-	//config.removeDialogTabs = 'link:advanced';
 };
