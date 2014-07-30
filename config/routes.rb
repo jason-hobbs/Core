@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+
+
   mount Ckeditor::Engine => '/ckeditor'
   resources :groups do
-    resources :posts
+    resources :posts do
+      resources :replies
+    end
   end
 
   resources :users
