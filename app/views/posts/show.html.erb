@@ -19,7 +19,8 @@
       <%= raw(@post.entry) %>
     </div>
     <br>
-    <div class="post-button dropper">+ REPLY</div>
+    <!-- <div class="post-button dropper">+ REPLY</div> -->
+    <%= link_to '+   REPLY', new_group_post_reply_path(@group, @post), :class=>'post-button' %>
     <hr>
   </div>
 </div>

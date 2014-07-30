@@ -1,0 +1,27 @@
+<%= form_for [@group, @post, @reply] do |f| %>
+  <% if @reply.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reply.errors.count, "error") %> prohibited this Reply from being saved:</h2>
+
+      <ul>
+      <% @reply.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="row left spacer">
+  <div class="small-12 medium-8 columns">
+    <%= f.label "Entry", class: "bold" %><br>
+    <%= f.cktext_area :entry %>
+  </div>
+</div>
+
+
+
+<div class="row left">
+  <div class="small-12 columns">
+    <%= f.submit "Reply", class: 'button tiny radius' %>
+
+<%end%>

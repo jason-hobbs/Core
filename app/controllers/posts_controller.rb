@@ -2,8 +2,8 @@ class PostsController < ApplicationController
   before_action :require_signin
   before_action :get_user
   before_action :get_group
-  def new
 
+  def new
     @post = Post.new
   end
 
@@ -27,10 +27,6 @@ class PostsController < ApplicationController
   end
 
   private
-
-  def get_group
-    @group = Group.find(params[:group_id])
-  end
 
   def post_params
     params.require(:post).permit(:title, :entry)
