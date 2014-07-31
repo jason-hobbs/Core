@@ -24,4 +24,25 @@
     <hr>
   </div>
 </div>
+
+
+
+<div class="row columns">
+  <div class="small-12 medium-10 columns ">
+    <% if @replies %>
+      <% @replies.each do |reply| %>
+        <div class="avatar f4-color">
+          <%= profile_image_for(reply.user, size: 35) %>
+        </div>
+        <div class="reply f4-color">
+          <strong><%= reply.user.name %></strong>
+          <br><br>
+          <%= raw(reply.entry) %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+
 </div>
