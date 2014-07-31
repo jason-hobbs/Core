@@ -25,24 +25,28 @@
   </div>
 </div>
 
+<% if @replies %>
+  <% @replies.each do |reply| %>
+    <div class="row columns">
+      <div class="small-12 medium-10 columns ">
+    <div class="avatar">
+      <%= profile_image_for(reply.user, size: 35) %>
+    </div>
+    <div class="post-entry">
+      <strong><%= reply.user.name %></strong>
+      <br><br>
+      <%= raw(reply.entry) %>
+      <%= link_to '+   REPLY', new_group_post_reply_path(@group, @post), :class=>'post-button' %>
 
-
-<div class="row columns">
-  <div class="small-12 medium-10 columns ">
-    <% if @replies %>
-      <% @replies.each do |reply| %>
-        <div class="avatar f4-color">
-          <%= profile_image_for(reply.user, size: 35) %>
-        </div>
-        <div class="reply f4-color">
-          <strong><%= reply.user.name %></strong>
-          <br><br>
-          <%= raw(reply.entry) %>
-        </div>
-      <% end %>
-    <% end %>
+    </div>
+        <hr>
   </div>
-</div>
+  </div>
+
+  <% end %>
+<% end %>
+
+
 
 
 </div>
