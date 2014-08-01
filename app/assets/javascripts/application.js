@@ -20,11 +20,9 @@
 
 $(function(){ $(document).foundation(); });
 
-$('.dropper').click(function () {
-            $('.head').slideToggle({
-      direction: "up"
-    }, 300);
-        });
+$(".reply-cancel").click(function(){
+  $(".head").hide();
+});
 
 
 

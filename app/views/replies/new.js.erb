@@ -1,0 +1,6 @@
+$('.head').empty();
+$('.head').slideDown(300);
+$('<%= escape_javascript(render @reply) %>').appendTo('.head');
+//$('.head').stop().slideToggle('fast', function() {
+//   $("<%= escape_javascript(render @reply) %>").appendTo(".head");
+//});

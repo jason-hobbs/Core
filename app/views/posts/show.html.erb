@@ -1,6 +1,6 @@
 <div class="bodywrapper">
 <br>
-<div class="head">test<div class="dropper">Close</div></div>
+<div class="head"></div>
 <div class="row columns">
   <div class="small-12 medium-10 columns">
     <h3 id="storyheader"><%= @post.title %></h3>
@@ -18,9 +18,8 @@
       <br><br>
       <%= raw(@post.entry) %>
     </div>
-    <br>
-    <div class="post-button dropper">REPLY(ajax)</div>
-    <%= link_to '+   REPLY', new_group_post_reply_path(@group, @post), :class=>'post-button' %>
+    <br>    
+    <%= link_to '+   REPLY', new_group_post_reply_path(@group, @post), :class=>'post-button', remote: true %>
     <hr>
   </div>
 </div>

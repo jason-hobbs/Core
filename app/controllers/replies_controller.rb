@@ -6,6 +6,10 @@ class RepliesController < ApplicationController
 
   def new
     @reply = Reply.new
+    respond_to do |format|
+      format.js
+      format.html
+    end
   end
 
   def create
