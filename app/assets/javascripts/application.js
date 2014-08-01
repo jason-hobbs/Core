@@ -21,7 +21,9 @@
 $(function(){ $(document).foundation(); });
 
 $('.dropper').click(function () {
-            $('.head').slideToggle(300);
+            $('.head').slideToggle({
+      direction: "up"
+    }, 300);
         });
 
 
