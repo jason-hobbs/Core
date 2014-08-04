@@ -1,0 +1,27 @@
+<%= form_for @group do |f| %>
+  <% if @group.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@group.errors.count, "error") %> prohibited this Group from being saved:</h2>
+
+      <ul>
+      <% @group.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<h3 id="storyheader">New Group</h3>
+
+<div class="row left">
+  <div class="small-12 medium-8 columns">
+    <%= f.label "Group Name", class: "bold" %><br>
+    <%= f.text_field :name, class: "radius" %>
+  </div>
+</div>
+
+<div class="row left">
+  <div class="small-12 columns">
+    <%= f.submit "Create Group", class: 'button tiny radius' %>
+
+<%end%>
