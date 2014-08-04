@@ -2,7 +2,8 @@ class User < ActiveRecord::Base
   has_secure_password
   has_many :posts
   has_many :replies
-  has_many :groups
+  has_many :groupmembers, dependent: :destroy
+  has_many :groups, through: :groupmembers
   validates :name, presence: true
   validates :email, presence: true,
                   format: /\A\S+@\S+\z/,

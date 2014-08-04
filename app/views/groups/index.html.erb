@@ -1,1 +1,27 @@
-hello
+<div class="bodywrapper">
+<h3 id='storyheader'>Listing groups</h3>
+
+
+
+<table>
+  <thead>
+    <tr class="liner">
+      <th>Name</th>
+
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @groups.each do |group| %>
+      <tr>
+        <td><%= link_to group.name, group %></td>
+        <td> <%= link_to 'Edit', edit_group_path(group) %> |
+         <%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<%= link_to 'New Group', new_group_path, class: "button tiny radius" %>
