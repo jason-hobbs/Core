@@ -49,5 +49,6 @@ class ApplicationController < ActionController::Base
   def get_post
     @post = Post.find(params[:post_id])
   end
+    
 
 end
