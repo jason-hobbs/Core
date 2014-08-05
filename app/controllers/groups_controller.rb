@@ -2,13 +2,14 @@ class GroupsController < ApplicationController
   before_action :require_signin
   before_action :require_admin, except: [:show]
   before_action :get_user
+  before_action :current_group, only: [:edit, :update, :destroy, :show]
+  before_action :get_all_users, only: [:edit, :new]
 
   def index
     @groups = Group.all
   end
 
   def show
-    @group = Group.find(params[:id])
     if @user.groups.find_by(:id=>@group.id)
       @posts = @group.posts
     else
@@ -29,9 +30,38 @@ class GroupsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @group.update(group_params)
+      redirect_to @group, :gflash => { :success => "Group updated!" }
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+      @group.destroy
+      redirect_to groups_path, :gflash => { :success => "Group deleted" }
+  end
+
+
+
+
+
+
   private
 
+  def get_all_users
+    @users = User.all
+  end
+
+  def current_group
+    @group = Group.find(params[:id])
+  end
+
   def group_params
-    params.require(:group).permit(:name)
+    params.require(:group).permit(:name, user_ids: [])
   end
 end

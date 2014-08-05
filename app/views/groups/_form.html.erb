@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-<h3 id="storyheader">New Group</h3>
+
 
 <div class="row left">
   <div class="small-12 medium-8 columns">
@@ -20,8 +20,21 @@
   </div>
 </div>
 
+
+<div class="row left">
+  <div class="small-12 medium-8 columns">
+    <%= f.collection_check_boxes(:user_ids, @users, :id, :name) do |b| %>
+    <%= b.label { b.check_box + ' ' + b.text } %>
+    <% end %>
+  </div>
+</div>
+
+
+
+
+
 <div class="row left">
   <div class="small-12 columns">
-    <%= f.submit "Create Group", class: 'button tiny radius' %>
+    <%= f.submit "Save", class: 'button tiny radius' %>
 
 <%end%>
