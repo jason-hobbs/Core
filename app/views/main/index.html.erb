@@ -1,35 +1,23 @@
 <div class="bodywrapper">
-
 <br>
+<%= render 'layouts/groupnav' %>
+
 <div class="row columns">
   <div class="small-12 columns">
-    <%= link_to '+   POST', new_group_post_path(@group), :class=>'post-button' %>
-      <% if @posts %>
-
-
-
+    <% if @posts %>
       <table>
-
-
         <tbody>
-        <% @posts.each do |post| %>
-          <tr>
-            <td width="70%"><%= link_to post.title, [@group, post] %></td>
-            <td width="10%">tag</td>
-            <td width="20%"><%= profile_image_for(post.user, size: 25) + ' ' + post.user.name %></td>
-          </tr>
-        <% end %>
+          <% @posts.each do |post| %>
+            <tr>
+              <td width="70%"><%= link_to post.title, [@group, post] %></td>
+              <td width="10%">tag</td>
+              <td width="20%"><%= profile_image_for(post.user, size: 25) + ' ' + post.user.name %></td>
+            </tr>
+          <% end %>
         </tbody>
       </table>
-
-
-
-
-      <% end %>
+    <% end %>
   </div>
 </div>
-
-
-
 
 </div>

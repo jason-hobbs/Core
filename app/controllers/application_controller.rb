@@ -49,6 +49,9 @@ class ApplicationController < ActionController::Base
   def get_post
     @post = Post.find(params[:post_id])
   end
-    
+
+  def get_allowed
+    @allowed = @user.groups.order(:name)
+  end
 
 end

@@ -4,9 +4,10 @@ class GroupsController < ApplicationController
   before_action :get_user
   before_action :current_group, only: [:edit, :update, :destroy, :show]
   before_action :get_all_users, only: [:edit, :new]
+  before_action :get_allowed, only: [:show]
 
   def index
-    @groups = Group.all
+    @groups = Group.all.order(:name)
   end
 
   def show
