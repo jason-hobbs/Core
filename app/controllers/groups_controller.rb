@@ -12,7 +12,7 @@ class GroupsController < ApplicationController
 
   def show
     if @user.groups.find_by(:id=>@group.id)
-      @posts = @group.posts
+      @posts = @group.posts.order(created_at: :desc)
     else
       redirect_to root_path, :gflash => { :notice => "Not authorized for group" }
     end

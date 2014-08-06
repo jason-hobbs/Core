@@ -5,7 +5,7 @@ class MainController < ApplicationController
 
   def index
     @group = Group.find_by(:name => 'community')
-    @posts = @group.posts    
+    @posts = @group.posts.order(created_at: :desc)
   end
 
 end
