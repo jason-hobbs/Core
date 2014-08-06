@@ -421,21 +421,21 @@
 // $include-html-dropdown-classes: $include-html-classes;
 
 // We use these to controls height and width styles.
-// $f-dropdown-max-width: 200px;
+// $f-dropdown-max-width: 200px
 // $f-dropdown-height: auto;
 // $f-dropdown-max-height: none;
 
 // Used for bottom position
-// $f-dropdown-margin-top: 2px;
+$f-dropdown-margin-top: 2px;
 
 // Used for right position
-// $f-dropdown-margin-left: $f-dropdown-margin-top;
+$f-dropdown-margin-left: $f-dropdown-margin-top;
 
 // Used for left position
-// $f-dropdown-margin-right: $f-dropdown-margin-top;
+$f-dropdown-margin-right: $f-dropdown-margin-top;
 
 // Used for top position
-// $f-dropdown-margin-bottom: $f-dropdown-margin-top;
+$f-dropdown-margin-bottom: $f-dropdown-margin-top;
 
 // We use this to control the background color
 // $f-dropdown-bg: #fff;
@@ -446,9 +446,9 @@
 // $f-dropdown-border-color: scale-color(#fff, $lightness: -20%);
 
 // We use these to style the triangle pip.
-// $f-dropdown-triangle-size: 6px;
-// $f-dropdown-triangle-color: #fff;
-// $f-dropdown-triangle-side-offset: 10px;
+$f-dropdown-triangle-size: 0px;
+$f-dropdown-triangle-color: #fff;
+$f-dropdown-triangle-side-offset: 10px;
 
 // We use these to control styles for the list elements.
 // $f-dropdown-list-style: none;
@@ -460,14 +460,14 @@
 // $dropdown-mobile-default-float: 0;
 
 // We use this to control the styles for when the dropdown has custom content.
-// $f-dropdown-content-padding: rem-calc(20);
+$f-dropdown-content-padding: rem-calc(20);
 
 // Dropdown Buttons
 
 // $include-html-button-classes: $include-html-classes;
 
 // We use these to set the color of the pip in dropdown buttons
-// $dropdown-button-pip-color: #fff;
+// $dropdown-button-pip-color: blue;
 // $dropdown-button-pip-color-alt: #333;
 
 // $button-pip-tny: rem-calc(6);
@@ -1106,7 +1106,7 @@
 
 // These control the row padding and font styles
 // $table-row-padding: rem-calc(9 10);
-   $table-row-font-size: .9em;
+//   $table-row-font-size: .9em;
 // $table-row-font-color: #222;
 // $table-line-height: rem-calc(18);
 

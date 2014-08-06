@@ -13,7 +13,16 @@
     <div class="panel"><h3>Links</h3>
       <div class="panel-contents">
         <%= link_to 'Groups', groups_path %><br><br>
-        <%= link_to 'Users', users_path %>
+        <%= link_to 'Users', users_path %><br><br>
+
+        <a href="#" data-dropdown="drop2">Has Dropdown</a>
+        <ul id="drop2" class="f-dropdown" data-dropdown-content>
+          <li><a href="#">This is a link</a></li>
+          <li><a href="#">This is another</a></li>
+          <li><a href="#">Yet another</a></li>
+        </ul>
+
+
       </div>
     </div>
   </div>
