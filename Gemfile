@@ -37,6 +37,7 @@ gem 'gritter'
 gem 'bcrypt', '~> 3.1.7'
 gem 'ckeditor'
 gem 'paperclip'
+gem 'jquery-turbolinks'
 
 # Use unicorn as the app server
 # gem 'unicorn'
