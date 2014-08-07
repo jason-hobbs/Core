@@ -3,7 +3,7 @@
 <div class="head"></div>
 <div class="row columns">
   <div class="small-12 medium-10 columns">
-    <h3 id="storyheader"><%= link_to @group.name, group_path(@group) %> / <%= @post.title %></h3>
+    <h3 id="storyheader"><%= link_to @group.name, group_path(@group), 'data-no-turbolink' => true %> / <%= @post.title %></h3>
     <hr>
   </div>
 </div>
@@ -19,7 +19,7 @@
       <%= raw(@post.entry) %>
     </div>
     <br>
-    <%= link_to '+   REPLY', new_group_post_reply_path(@group, @post), :class=>'button tiny radius right', remote: true %>
+    <%= link_to '+   REPLY', new_group_post_reply_path(@group, @post), :class=>'button tiny radius right', 'data-no-turbolink' => true, remote: true %>
     <hr>
   </div>
 </div>
