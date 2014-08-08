@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   end
 
   resources :users
+  resources :tags
 
   resources :dashboards
   root 'main#index'
