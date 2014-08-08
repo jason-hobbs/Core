@@ -1,0 +1,38 @@
+<%= form_for(@tag) do |f| %>
+  <% if @tag.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tag.errors.count, "error") %> prohibited this tag from being saved:</h2>
+
+      <ul>
+      <% @tag.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<div class="row left">
+  <div class="small-12 columns">
+    <%= f.label "Tag Name", class: "bold" %><br>
+    <%= f.text_field :name, :size=>"50", class: "radius entry" %>
+  </div>
+</div>
+
+<div class="row left">
+  <div class="small-12 columns">
+    <%= f.label "Tag Color", class: "bold" %><br>
+    <%= f.text_field :color, class: "radius entry" %>
+  </div>
+</div>
+
+<div class="row left">
+  <div class="small-12 columns">
+  <% if @tag.new_record? %>
+    <%= f.submit "Create Tag", class: 'button tiny radius' %>
+  <% else %>
+    <%= f.submit "Update Tag",  class: 'button tiny radius' %>
+<% end %>
+
+
+<% end %>

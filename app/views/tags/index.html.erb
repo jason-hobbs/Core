@@ -1,0 +1,29 @@
+<div class="bodywrapper">
+<h3 id='storyheader'>Listing tags</h3>
+
+
+
+<table>
+  <thead>
+    <tr class="liner">
+      <th>Name</th>
+      <th>Color</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tags.each do |tag| %>
+      <tr>
+        <td><%= tag.name %></td>
+        <td><%= tag.color %></td>
+        <td> <%= link_to 'Edit', edit_tag_path(tag) %> |
+         <%= link_to 'Destroy', tag, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<%= link_to 'New Tag', new_tag_path, class: "button tiny radius" %>
+</div>
