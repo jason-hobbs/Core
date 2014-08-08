@@ -2,25 +2,32 @@
 <br>
 <div class="head"></div>
 <div class="row columns">
-  <div class="small-12 medium-10 columns">
+  <div class="small-10 columns">
     <h3 id="storyheader"><%= link_to @group.name, group_path(@group) %> / <%= @post.title %></h3>
-    <hr>
-  </div>
+   </div>
+
+
+
 </div>
+
+
 
 <div class="row columns">
   <div class="small-12 medium-10 columns ">
+    <hr>
+
     <div class="avatar">
       <%= profile_image_for(@post.user, size: 35) %>
     </div>
     <div class="post-entry">
       <strong><%= @post.user.name %></strong>
+      <%= link_to '+   REPLY', new_group_post_reply_path(@group, @post), :class=>'button tiny radius right', 'data-no-turbolink' => true, remote: true %>
+
       <br><br>
       <%= raw(@post.entry) %>
     </div>
     <br>
-    <%= link_to '+   REPLY', new_group_post_reply_path(@group, @post), :class=>'button tiny radius right', 'data-no-turbolink' => true, remote: true %>
-    <hr>
+        <hr>
   </div>
 </div>
 
