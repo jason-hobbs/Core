@@ -2,7 +2,7 @@
 <br>
 
 <p>
-  <%= profile_image_for(@current_user) %>
+  <%= image_tag @user.photo.url, :class => "gravatar" %>
   <br>
   <strong>Name:</strong>
   <%= @user.name %><br>

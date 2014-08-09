@@ -17,7 +17,7 @@
     <hr>
 
     <div class="avatar">
-      <%= profile_image_for(@post.user, size: 35) %>
+      <%= image_tag(@post.user.photo.url, size: "35x35", :class => "gravatar") %>
     </div>
     <div class="post-entry">
       <strong><%= @post.user.name %></strong>
@@ -36,7 +36,7 @@
     <div class="row columns">
       <div class="small-12 medium-10 columns ">
     <div class="avatar">
-      <%= profile_image_for(reply.user, size: 35) %>
+      <%= image_tag(reply.user.photo.url, size: "35x35", :class => "gravatar") %>
     </div>
     <div class="post-entry">
       <strong><%= reply.user.name %></strong>

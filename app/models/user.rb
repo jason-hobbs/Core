@@ -1,5 +1,11 @@
 class User < ActiveRecord::Base
   has_secure_password
+  has_attached_file :photo,
+                    :styles => {
+                      :thumb => ["80x80", :jpg],
+                    },
+                    :default_style => :thumb
+  validates_attachment :photo, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
   has_many :posts
   has_many :replies
   has_many :groupmembers, dependent: :destroy

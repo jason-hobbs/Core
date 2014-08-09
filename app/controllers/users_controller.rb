@@ -55,7 +55,7 @@ def create
 	private
 
 	def user_params
-  	  params.require(:user).permit(:name, :email, :password, :password_confirmation, feed_ids: [])
+  	  params.require(:user).permit(:name, :email, :password, :password_confirmation, :photo, feed_ids: [])
 	end
 
 	def require_correct_user

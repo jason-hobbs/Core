@@ -1,4 +1,4 @@
-<%= form_for(@user) do |f| %>
+<%= form_for @user, :html => { :multipart => true }  do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this User from being saved:</h2>
@@ -38,6 +38,12 @@
   <div class="small-12 columns">
     <%= f.label "Password Confirmation", class: "bold" %><br>
     <%= f.password_field :password_confirmation, class: "radius entry" %>
+  </div>
+</div>
+
+<div class="row left">
+  <div class="small-12 columns">
+    <%= f.file_field :photo %>
   </div>
 </div>
 
