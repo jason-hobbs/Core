@@ -17,7 +17,7 @@ class RepliesController < ApplicationController
     @reply.post_id = @post.id
     @reply.user_id = @user.id
     if @reply.save
-      redirect_to group_post_path(@group, @post), :gflash => { :success => "Posted successfully" }
+      redirect_to group_post_path(@group, @post, :anchor => "end"), :gflash => { :success => "Posted successfully" }
     else
       render :new
     end
