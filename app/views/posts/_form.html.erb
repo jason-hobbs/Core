@@ -21,6 +21,12 @@
 </div>
 
 <div class="row left spacer">
+  <div class="small-3 medium-2 columns">
+    <%= f.collection_select(:tag_id, Tag.all.order(:name), :id, :name, :prompt => true ) %>
+  </div>
+</div>
+
+<div class="row left spacer">
   <div class="small-12 medium-8 columns">
     <%= f.label "Entry", class: "bold" %><br>
     <%= f.cktext_area :entry %>

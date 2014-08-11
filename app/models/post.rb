@@ -6,4 +6,6 @@ class Post < ActiveRecord::Base
   validates :entry, presence: true
   validates :title, presence: true
   validates :group_id, presence: true
+  validates :tag_id, presence: true
+  validates :user_id, presence: true
 end
