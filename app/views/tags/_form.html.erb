@@ -28,6 +28,13 @@
 
 <div class="row left">
   <div class="small-12 columns">
+    <%= f.label "Text Color", class: "bold" %><br>
+    <%= f.text_field :textcolor, class: "radius entry" %>
+  </div>
+</div>
+
+<div class="row left">
+  <div class="small-12 columns">
   <% if @tag.new_record? %>
     <%= f.submit "Create Tag", class: 'button tiny radius' %>
   <% else %>

@@ -7,7 +7,7 @@
             <tr>
               <td colspan="2"><%= link_to post.title, [@group, post] %></td>
               <td><%= distance_of_time_in_words(post.created_at, Time.now) %> ago</td>
-              <td>tag</td>
+              <td><div style="background-color:<%= post.tag.color %>;display: inline;padding:2px;border-radius: 3px;color: <%= post.tag.textcolor %>;"><%= post.tag.name %></div></td>
               <td><%= image_tag(post.user.photo.url, size: "25x25", :class => "gravatar") + ' ' + post.user.name %></td>
             </tr>
           <% end %>
