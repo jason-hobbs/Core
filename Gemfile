@@ -39,6 +39,7 @@ gem 'ckeditor'
 gem 'paperclip'
 gem 'jquery-turbolinks'
 gem 'will_paginate'
+gem 'bullet', group: :development
 
 # Use unicorn as the app server
 # gem 'unicorn'
