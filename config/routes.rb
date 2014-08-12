@@ -12,7 +12,8 @@ Rails.application.routes.draw do
   resources :tags
 
   resources :dashboards
-  root 'main#index'
+  #root 'main#index'
+  root 'groups#show', :id => 1
   get 'signin' => 'sessions#new'
   resource :session
 
