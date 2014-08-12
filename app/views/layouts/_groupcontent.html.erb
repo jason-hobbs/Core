@@ -2,7 +2,7 @@
   <div class="small-12 columns">
     <% if @posts %>
       <table>
-        <tbody>
+        <tbody id="posts">
           <% @posts.each do |post| %>
             <tr>
               <td colspan="2"><%= link_to post.title, [@group, post] %></td>
