@@ -9,7 +9,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @replies = @post.replies
+    @replies = @post.replies.includes(:user)
   end
 
   def update
