@@ -7,4 +7,4 @@ jQuery ->
     if url && $(window).scrollTop() > $(document).height() - $(window).height() - 5
       $('.pagination').html("<img class='mid' src='/assets/ajax-loader.gif' alt='Loading...' title='Loading...' />")
       $.getScript(url)
-  $(window).scroll()
+  
