@@ -4,6 +4,11 @@ class RepliesController < ApplicationController
   before_action :get_group
   before_action :get_post
 
+
+  def index
+    @replies = @post.replies.includes(:user)
+  end
+
   def new
     @reply = Reply.new
     respond_to do |format|
