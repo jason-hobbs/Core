@@ -1,0 +1,13 @@
+<% if @replies %>
+  <% @replies.each do |@reply| %>
+<div class="avatar">
+  <%= image_tag(@reply.user.photo.url, size: "35x35", :class => "gravatar") %>
+</div>
+<div class="post-entry">
+  <strong><%= @reply.user.name %></strong>
+  <br><br>
+  <%= raw(@reply.entry) %>
+</div>
+    <hr>
+    <% end %>
+  <% end %>
