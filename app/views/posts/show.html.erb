@@ -18,9 +18,8 @@
       <%= image_tag(@post.user.photo.url, size: "35x35", :class => "gravatar") %>
     </div>
     <div class="post-entry">
-      <strong><%= @post.user.name %></strong>
+      <strong><%= @post.user.name %></strong><span class="time"><%= " " + distance_of_time_in_words(@post.created_at, Time.now) + " ago" %></span>
       <%= link_to '+   REPLY', new_group_post_reply_path(@group, @post), :class=>'button tiny radius right', 'data-no-turbolink' => true, remote: true %>
-
       <br><br>
       <%= raw(@post.entry) %>
     </div>
