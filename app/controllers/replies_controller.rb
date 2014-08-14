@@ -6,7 +6,7 @@ class RepliesController < ApplicationController
 
 
   def index
-    @replies = @post.replies.includes(:user)
+    @replies = @post.replies.includes(:user).where('id > ?', params[:after].to_i)
   end
 
   def new

@@ -3,10 +3,10 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 @ReplyPoller =
   poll: ->
-    setTimeout @request, 5000
+    setTimeout @request, 10000
 
   request: ->
-    $.get($('#replies').data('url'))
+    $.get($('#replies').data('url'), after: $('.reply').last().data('id'))
 
 
 jQuery ->
