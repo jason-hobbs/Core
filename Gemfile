@@ -40,6 +40,8 @@ gem 'paperclip'
 gem 'jquery-turbolinks'
 gem 'will_paginate'
 gem 'bullet', group: :development
+gem 'rails-perftest'
+gem 'ruby-prof'
 #gem 'rack-mini-profiler'
 
 # Use unicorn as the app server
