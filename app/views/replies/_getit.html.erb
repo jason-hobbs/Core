@@ -6,11 +6,13 @@
           <%= image_tag(reply.user.photo.url, size: "35x35", :class => "gravatar") %>
         </div>
         <div data-id="<%= reply.id %>" class="post-entry reply">
-          <strong><%= reply.user.name %></strong><span class="time"><%= " " + distance_of_time_in_words(reply.created_at, Time.now) + " ago" %></span>
-          <br><br>
-          <%= raw(reply.entry) %>
+          <div class="post-header">
+            <strong><%= reply.user.name %></strong><span class="time"><%= " " + distance_of_time_in_words(reply.created_at, Time.now) + " ago" %></span>
+          </div>
+          <div class="post-body">
+            <%= raw(reply.entry) %>
+          </div>
         </div>
-        <hr>
       </div>
     </div>
   <% end %>
