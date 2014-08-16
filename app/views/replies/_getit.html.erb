@@ -8,6 +8,9 @@
         <div data-id="<%= reply.id %>" class="post-entry reply">
           <div class="post-header">
             <strong><%= reply.user.name %></strong><span class="time"><%= " " + distance_of_time_in_words(reply.created_at, Time.now) + " ago" %></span>
+            <% if reply.user.name == @user.name %>
+              <%= link_to "#{image_tag("pencil2.png", size: "20")}".html_safe, root_path, :title => "Edit" %>
+            <% end %>
           </div>
           <div class="post-body">
             <%= raw(reply.entry) %>
