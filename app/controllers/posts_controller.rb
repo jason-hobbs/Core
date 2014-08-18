@@ -10,6 +10,7 @@ class PostsController < ApplicationController
 
   def show
     @replies = @post.replies.includes(:user)
+    @reply = Reply.new
   end
 
   def edit

@@ -1,0 +1,21 @@
+<div class="row columns">
+  <div class="small-12 medium-10 columns ">
+
+
+    <div class="avatar">
+      <%= image_tag(@user.photo.url, size: "35x35", :class => "gravatar") %>
+    </div>
+    <div class="post-entry">
+      <div class="post-header">
+        <strong>add comment</strong>
+      </div>
+      <div class="post-body">
+        <%= form_for [@group, @post, @reply] do |f| %>
+          <%= f.cktext_area :entry %>
+          <br>
+          <%= f.submit "Reply", class: 'button tiny radius' %>
+        <%end%>
+      </div>
+    </div>
+  </div>
+</div>
