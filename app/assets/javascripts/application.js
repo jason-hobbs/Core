@@ -34,8 +34,4 @@ $(document).ready(
             fade_out_speed: 100, // how fast the notices fade out
             time: 500 // hang on the screen for...
           });
-
-
-
-
 });

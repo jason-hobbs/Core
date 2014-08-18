@@ -9,6 +9,9 @@ class RepliesController < ApplicationController
     @replies = @post.replies.includes(:user).where('id > ?', params[:after].to_i)
   end
 
+  def edit
+  end
+
   def new
     @reply = Reply.new
     respond_to do |format|
