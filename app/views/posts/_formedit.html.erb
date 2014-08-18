@@ -1,0 +1,32 @@
+<%= form_for [@group, @post] do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this Post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.label "Title", class: "bold" %><br>
+    <%= f.text_field :title, class: "radius" %>
+
+
+    <%= f.label "Tag", class: "bold" %><br>
+    <%= f.collection_select(:tag_id, Tag.all.order(:name), :id, :name, :prompt => true ) %>
+
+
+
+    <%= f.label "Entry", class: "bold" %><br>
+    <%= f.cktext_area :entry %>
+<br>
+
+
+
+
+    <%= f.submit "Edit Post", class: 'button tiny radius' %> <%= link_to 'Cancel', group_post_path(@group, @post), class: "button tiny radius" %>
+
+<%end%>

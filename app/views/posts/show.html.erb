@@ -25,7 +25,7 @@
           <%= link_to "#{image_tag("pencil2.png", size: "20")}".html_safe, edit_group_post_path(@group, @post), :title => "Edit", remote: true %>
         <% end %>
       </div>
-      <div class="post-body">
+      <div class="post-body" id="postbody">
         <%= raw(@post.entry) %>
       </div>
     </div>
