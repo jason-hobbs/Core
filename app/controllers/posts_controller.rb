@@ -18,7 +18,7 @@ class PostsController < ApplicationController
 
   def update
     if @post.update(post_params)
-      redirect_to @post
+      redirect_to group_post_path(@group, @post)
     else
       render :edit
     end
