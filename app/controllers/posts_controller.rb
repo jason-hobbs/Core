@@ -9,7 +9,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @replies = @post.replies.includes(:user)
+    @replies = @post.replies.includes(:user).order(:created_at)
     @reply = Reply.new
   end
 
