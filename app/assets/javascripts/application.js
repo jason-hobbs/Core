@@ -35,3 +35,7 @@ $(document).ready(
             time: 500 // hang on the screen for...
           });
 });
+
+$('.post-header').click(function(){
+alert($(this).parent().attr('data-id'));
+});

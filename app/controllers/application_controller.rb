@@ -54,4 +54,8 @@ class ApplicationController < ActionController::Base
     @allowed = @user.groups.order(:name)
   end
 
+  def get_reply
+    @reply = Reply.find(params[:id])
+  end
+
 end

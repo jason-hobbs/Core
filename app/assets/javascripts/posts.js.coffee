@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 @ReplyPoller =
   poll: ->
-    setTimeout @request, 15000
+    setTimeout @request, 25000
 
   request: ->
     $.get($('#replies').data('url'), after: $('.reply').last().data('id'))

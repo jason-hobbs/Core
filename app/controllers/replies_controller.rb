@@ -3,6 +3,7 @@ class RepliesController < ApplicationController
   before_action :get_user
   before_action :get_group
   before_action :get_post
+  before_action :get_reply, only: [:edit, :update ]
 
 
   def index
@@ -10,6 +11,7 @@ class RepliesController < ApplicationController
   end
 
   def edit
+
   end
 
   def new
@@ -17,6 +19,14 @@ class RepliesController < ApplicationController
     respond_to do |format|
       format.js
       format.html
+    end
+  end
+
+  def update
+    if @reply.update(reply_params)
+      redirect_to group_post_path(@group, @post)
+    else
+      render :edit
     end
   end
 
