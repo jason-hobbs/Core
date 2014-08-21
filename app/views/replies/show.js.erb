@@ -1,0 +1,2 @@
+$("#reply<%= @reply.id %>").empty();
+$('#reply<%= @reply.id %>').append("<%= j render partial: 'showreply' %>")

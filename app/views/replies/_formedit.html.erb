@@ -16,7 +16,7 @@
   <br>
 
 
-    <%= f.submit "Save Reply", class: 'button tiny radius' %> <%= link_to 'Cancel', group_post_path(@group, @post), class: "button tiny radius" %>
+    <%= f.submit "Save Reply", class: 'button tiny radius' %> <%= link_to 'Cancel', group_post_reply_path(@group, @post, @reply), class: "button tiny radius", :remote => true %>
 
 
 <%end%>

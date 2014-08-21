@@ -3,7 +3,7 @@ class RepliesController < ApplicationController
   before_action :get_user
   before_action :get_group
   before_action :get_post
-  before_action :get_reply, only: [:edit, :update ]
+  before_action :get_reply, only: [:edit, :update, :show ]
 
 
   def index
@@ -11,7 +11,9 @@ class RepliesController < ApplicationController
   end
 
   def edit
+  end
 
+  def show
   end
 
   def new
