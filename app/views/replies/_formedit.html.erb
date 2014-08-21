@@ -1,0 +1,22 @@
+<%= form_for [@group, @post, @reply] do |f| %>
+  <% if @reply.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reply.errors.count, "error") %> prohibited this Reply from being saved:</h2>
+
+      <ul>
+      <% @reply.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+    <%= f.cktext_area :entry %>
+  <br>
+
+
+    <%= f.submit "Save Reply", class: 'button tiny radius' %> <%= link_to 'Cancel', group_post_path(@group, @post), class: "button tiny radius" %>
+
+
+<%end%>

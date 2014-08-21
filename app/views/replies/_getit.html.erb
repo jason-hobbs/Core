@@ -12,7 +12,7 @@
               <%= link_to "#{image_tag("pencil2.png", size: "20")}".html_safe, edit_group_post_reply_path(@group, @post, reply), :title => "Edit", :data => { :replyid => reply.id }, :remote => true %>
             <% end %>
           </div>
-          <div class="post-body">
+          <div class="post-body" id="reply<%= reply.id %>">
             <%= raw(reply.entry) %>
           </div>
         </div>

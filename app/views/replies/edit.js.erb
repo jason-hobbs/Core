@@ -1,4 +1,3 @@
-//replyid = $('.reply').data('id')
-//dataid = $(this).data('replyid')
-alert('<%= @reply.id %>')
-//alert($(this).data('id'))
+//alert('<%= @reply.id %>')
+$("#reply<%= @reply.id %>").empty();
+$('#reply<%= @reply.id %>').append("<%= j render partial: 'formedit' %>")
