@@ -5,7 +5,6 @@ class RepliesController < ApplicationController
   before_action :get_group
   before_action :get_post
   before_action :get_reply, only: [:edit, :update, :show ]
-  #skip_before_filter :verify_authenticity_token, :only => [:show]
 
 
   def index
@@ -31,7 +30,7 @@ class RepliesController < ApplicationController
       if @reply.update(reply_params)
         format.js {render :show}
       else
-        render :edit
+        format.js {render :edit}      
       end
     end
   end
