@@ -1,9 +1,11 @@
 class RepliesController < ApplicationController
+  respond_to :js, :html
   before_action :require_signin
   before_action :get_user
   before_action :get_group
   before_action :get_post
   before_action :get_reply, only: [:edit, :update, :show ]
+  #skip_before_filter :verify_authenticity_token, :only => [:show]
 
 
   def index
@@ -25,10 +27,12 @@ class RepliesController < ApplicationController
   end
 
   def update
-    if @reply.update(reply_params)
-      redirect_to group_post_path(@group, @post)
-    else
-      render :edit
+    respond_to do |format|
+      if @reply.update(reply_params)
+        format.js {render :show}
+      else
+        render :edit
+      end
     end
   end
 
