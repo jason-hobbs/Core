@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  respond_to :js, :html
   before_action :require_signin
   before_action :get_user
   before_action :get_group
@@ -17,10 +18,12 @@ class PostsController < ApplicationController
   end
 
   def update
-    if @post.update(post_params)
-      redirect_to group_post_path(@group, @post)
-    else
-      render :edit
+    respond_to do |format|
+      if @post.update(post_params)
+        format.js {render :show}
+      else
+        format.js {render :edit}
+      end
     end
   end
 
