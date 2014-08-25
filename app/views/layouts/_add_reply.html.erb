@@ -10,7 +10,7 @@
         <strong>add comment</strong>
       </div>
       <div class="post-body" id="addreply">
-        <%= form_for [@group, @post, @reply] do |f| %>
+        <%= form_for [@group, @post, @reply], remote:true do |f| %>
           <%= f.cktext_area :entry %>
           <br>
           <%= f.submit "Reply", class: 'button tiny radius' %>

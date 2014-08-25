@@ -30,7 +30,7 @@ class RepliesController < ApplicationController
       if @reply.update(reply_params)
         format.js {render :show}
       else
-        format.js {render :edit}      
+        format.js {render :edit}
       end
     end
   end
@@ -39,10 +39,12 @@ class RepliesController < ApplicationController
     @reply = Reply.new(reply_params)
     @reply.post_id = @post.id
     @reply.user_id = @user.id
-    if @reply.save
-      redirect_to group_post_path(@group, @post, :anchor => "end"), :gflash => { :success => "Posted successfully" }
-    else
-      render :new
+    respond_to do |format|
+      if @reply.save
+        redirect_to group_post_path(@group, @post, :anchor => "end"), :gflash => { :success => "Posted successfully" }
+      else
+        format.js {render :new}
+      end
     end
   end
 
