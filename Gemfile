@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby '2.1.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
 # Use sqlite3 as the database for Active Record
@@ -27,6 +27,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'cancan'
 gem 'foundation-rails'
+gem 'rails_12factor'
 
 group :development do
   gem 'brakeman', :require => false
