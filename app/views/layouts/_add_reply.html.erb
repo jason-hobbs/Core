@@ -8,7 +8,7 @@
     <div class="post-entry">
       <div class="post-header">
         <strong>add comment</strong>
-      </div>
+      </div>  
       <div class="post-body" id="addreply">
         <%= form_for [@group, @post, @reply], remote:true do |f| %>
           <%= f.cktext_area :entry %>

@@ -1,1 +1,7 @@
 $('#replies').append("<%= j render partial: 'addnewreply' %>")
+$('#add-reply').empty();
+$('#error_explanation').remove();
+$('#add-reply').append("<%= j render partial: 'layouts/add_reply' %>")
+for(var i in CKEDITOR.instances) {
+    CKEDITOR.instances[i].setData(' ');
+}
