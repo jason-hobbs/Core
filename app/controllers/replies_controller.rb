@@ -4,7 +4,7 @@ class RepliesController < ApplicationController
   before_action :get_user
   before_action :get_group
   before_action :get_post
-  before_action :get_reply, only: [:edit, :update, :show ]
+  before_action :get_reply, only: [:edit, :update, :show, :addnewreply ]
 
 
   def index
@@ -25,6 +25,9 @@ class RepliesController < ApplicationController
     end
   end
 
+  def addnewreply
+  end
+
   def update
     respond_to do |format|
       if @reply.update(reply_params)
@@ -41,7 +44,8 @@ class RepliesController < ApplicationController
     @reply.user_id = @user.id
     respond_to do |format|
       if @reply.save
-        redirect_to group_post_path(@group, @post, :anchor => "end"), :gflash => { :success => "Posted successfully" }
+        #redirect_to group_post_path(@group, @post, :anchor => "end"), :gflash => { :success => "Posted successfully" }
+        format.js {render :addnewreply}
       else
         format.js {render :new}
       end
