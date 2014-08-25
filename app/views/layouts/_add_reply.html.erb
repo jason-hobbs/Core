@@ -9,7 +9,7 @@
       <div class="post-header">
         <strong>add comment</strong>
       </div>
-      <div class="post-body">
+      <div class="post-body" id="addreply">
         <%= form_for [@group, @post, @reply] do |f| %>
           <%= f.cktext_area :entry %>
           <br>
