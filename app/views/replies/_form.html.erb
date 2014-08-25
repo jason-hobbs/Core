@@ -10,18 +10,7 @@
       </ul>
     </div>
   <% end %>
-
-<div class="row left spacer">
-  <div class="small-12 columns">
-    <br>
-    <%= f.cktext_area :entry %>
-  </div>
-</div>
-
-
-
-<div class="row left">
-  <div class="small-12 columns">
-    <%= f.submit "Reply", class: 'button tiny radius' %>
-
+  <%= f.cktext_area :entry %>
+  <br>
+  <%= f.submit "Reply", class: 'button tiny radius' %>
 <%end%>
