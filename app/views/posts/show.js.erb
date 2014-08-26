@@ -5,3 +5,4 @@ $('#storyheader').append("<%= j render partial: 'showheader' %>")
 $("#posttag").empty();
 $('#posttag').append("<%= j render partial: 'showposttag' %>")
 $('#posttag').css('background-color', '<%= @post.tag.color %>');
+$('#posttag').css('color', '<%= @post.tag.textcolor %>');
