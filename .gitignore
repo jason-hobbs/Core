@@ -14,6 +14,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+/public/ckeditor_assets
 /public/assets
 /public/photos/000
 /public/system/users
