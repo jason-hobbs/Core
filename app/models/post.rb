@@ -2,7 +2,7 @@ class Post < ActiveRecord::Base
   belongs_to :group
   belongs_to :user
   belongs_to :tag
-  has_many :replies
+  has_many :replies, dependent: :destroy
   validates :title, presence: true
   validates :group_id, presence: true
   validates :tag_id, presence: true

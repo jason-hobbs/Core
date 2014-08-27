@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :require_signin
   before_action :get_user
   before_action :get_group
-  before_action :get_post, only: [:show, :edit, :update ]
+  before_action :get_post, only: [:show, :edit, :update, :destroy ]
 
   def new
     @post = Post.new
@@ -36,6 +36,11 @@ class PostsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @post.destroy
+    redirect_to group_path(@group), :gflash => { :success => "Post deleted" }
   end
 
   private
