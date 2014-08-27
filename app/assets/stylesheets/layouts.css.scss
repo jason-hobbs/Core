@@ -22,7 +22,22 @@ body {
   border-radius: 3px;
   padding: 0;
   h3 {
-    background: -webkit-gradient(linear, left top, left bottom, from(#efefef), to(#dfe1e2));
+    /*background: -webkit-gradient(linear, left top, left bottom, from(#efefef), to(#dfe1e2));*/
+
+
+    background: #efefef; /* Old browsers */
+    background: -moz-linear-gradient(top,  #efefef 0%, #dfe1e2 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(100%,#dfe1e2)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #efefef 0%,#dfe1e2 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #efefef 0%,#dfe1e2 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #efefef 0%,#dfe1e2 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #efefef 0%,#dfe1e2 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#dfe1e2',GradientType=0 ); /* IE6-9 */
+
+
+
+
+
     text-shadow: white 0 1px 0;
     padding-left: 5px;
     border: solid 1px #cdcdcd;
