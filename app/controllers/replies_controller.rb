@@ -55,7 +55,10 @@ class RepliesController < ApplicationController
 
   def destroy
     @reply.destroy
-    redirect_to group_post_path(@group, @post)
+    respond_to do |format|
+      format.js {render :delete}
+    end
+    #redirect_to group_post_path(@group, @post)
   end
 
   private
