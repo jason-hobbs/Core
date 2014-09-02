@@ -17,6 +17,10 @@ class PostsController < ApplicationController
   def edit
   end
 
+  def index
+    @posts = Post.search(params[:search])
+  end
+
   def update
     respond_to do |format|
       if @post.update(post_params)

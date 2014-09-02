@@ -8,4 +8,14 @@ class Post < ActiveRecord::Base
   validates :tag_id, presence: true
   validates :user_id, presence: true
   validates_length_of :entry, :in => 2..10000, :allow_blank => false
+
+
+  def self.search(search)
+    if search
+      where('title LIKE ?', "%#{search}%")
+    else
+      find(:all)
+    end
+  end
+
 end
