@@ -19,7 +19,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.search(params[:search]).where('group_id = @group_id').limit(20).order('created_at asc')
+    @posts = Post.where('title like ?', "%#{params[:search]}%" ).where('group_id = @group_id').limit(20).order('created_at asc')
   end
 
   def update
