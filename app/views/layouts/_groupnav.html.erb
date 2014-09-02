@@ -1,5 +1,5 @@
 <div class="row columns">
-  <div class="small-12 columns">
+  <div class="small-2 columns">
 
     <a href="#" data-dropdown="drop1" class="button dropdown tiny radius"><%= @group.name %></a>
     <ul id="drop1" data-dropdown-content class="f-dropdown">
@@ -10,8 +10,20 @@
       <% end %>
     </ul>
 
-
+</div>
+<div class="small-2 columns">
     <%= link_to '+   Post', new_group_post_path(@group), :class=>'button tiny radius' %>
+</div>
+<div class="small-6 columns">
+    <%= form_tag group_posts_path(@group), :method => 'get' do %>
+
+        <%= text_field_tag :search, params[:search], size: 25 %>
+      </div>
+        <div class="small-2 columns">
+        <%= submit_tag "Search", :name => nil, class: "button tiny radius" %>
+
+
+   <% end %>
 
   </div>
 </div>
