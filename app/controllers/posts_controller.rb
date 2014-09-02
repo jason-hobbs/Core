@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   before_action :get_user
   before_action :get_group
   before_action :get_post, only: [:show, :edit, :update, :destroy ]
+  before_action :get_allowed, only: [:index]
 
   def new
     @post = Post.new
@@ -18,7 +19,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.search(params[:search])
+    @posts = Post.search(params[:search]).where('group_id = @group_id').limit(20).order('created_at asc')
   end
 
   def update
