@@ -19,8 +19,11 @@ class Post < ActiveRecord::Base
     if query.present?
       search(query)
     else
-      scoped
+      order("created_at DESC")
     end
   end
+
+
+
 
 end
