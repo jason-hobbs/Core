@@ -9,3 +9,6 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( success.png )
 Rails.application.config.assets.precompile += %w( notice.png )
 Rails.application.config.assets.precompile += %w( warning.png )
+Rails.application.config.assets.precompile += %w( ie-spacer.gif )
+Rails.application.config.assets.precompile += %w( gritter.png )
+Rails.application.config.assets.precompile += %w( gritter-close.png )
