@@ -16,7 +16,7 @@
 </div>
 <div class="medium-4 columns show-for-medium-up sizer2">
     <%= form_tag group_posts_path(@group), :method => 'get' do %>
-      <%= text_field_tag :search, params[:search], class: "left inline textfield-size" %> <%= submit_tag "Search", :name => nil, class: "button tiny radius right" %>
+      <%= text_field_tag :query, params[:query], class: "left inline textfield-size" %> <%= submit_tag "Search", :name => nil, class: "button tiny radius right" %>
    <% end %>
   </div>
 </div>

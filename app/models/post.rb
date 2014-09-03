@@ -10,11 +10,16 @@ class Post < ActiveRecord::Base
   validates_length_of :entry, :in => 2..10000, :allow_blank => false
 
 
-  def self.search(search)
-    if search
-      where('title LIKE ?', "%#{search}%")
+  include PgSearch
+  pg_search_scope :search, against: [:title, :entry],
+  using: {tsearch: {dictionary: "english"}},
+  associated_against: {replies: :entry}
+
+  def self.text_search(query)
+    if query.present?
+      search(query)
     else
-      find(:all)
+      scoped
     end
   end
 
