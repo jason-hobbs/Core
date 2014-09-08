@@ -41,7 +41,7 @@ GEM
       slim (>= 1.3.6, < 3.0)
       terminal-table (~> 1.4)
     builder (3.2.2)
-    bullet (4.13.1)
+    bullet (4.13.2)
       activesupport (>= 3.0.0)
       uniform_notifier (>= 1.6.0)
     cancan (1.6.10)
@@ -94,7 +94,7 @@ GEM
       cocaine (~> 0.5.3)
       mime-types
     pg (0.17.1)
-    pg_search (0.7.6)
+    pg_search (0.7.8)
       activerecord (>= 3.1)
       activesupport (>= 3.1)
       arel
