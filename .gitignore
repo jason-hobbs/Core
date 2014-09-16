@@ -14,7 +14,6 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-/public
 /config/secrets.yml
 /public/photos/000
 /public/system/users
