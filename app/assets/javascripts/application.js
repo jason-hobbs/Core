@@ -25,7 +25,7 @@ $(".reply-cancel").click(function(){
   $(".head").hide();
 });
 
-
+jQuery.extend($.gritter.options,{time:1000,});
 
 $(document).ready(
     function() {
