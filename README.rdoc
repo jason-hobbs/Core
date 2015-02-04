@@ -1,28 +1,24 @@
-== README
+Comment system experiment in Rails 4 and Ruby 2.
+Demo site at core.filarcis.com.
+login is test@test.com and Testing1 for the password.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+If building you will have to supply:
 
-Things you may want to cover:
+config/database.yml
+config/secrets.yml
 
-* Ruby version
+Demo app uses Postgresql.
 
-* System dependencies
+Clone and enter directory, then run:
 
-* Configuration
+bundle
+(After creating secrets.yml and database.yml)
+rake db:create
+rake db:migrate
+rake db:seed
 
-* Database creation
+Finally, run 'rails s' to start a server at localhost:3000
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Admin login is:
+test@test.com
+Testing1
