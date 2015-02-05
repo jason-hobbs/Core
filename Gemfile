@@ -3,8 +3,8 @@ source 'https://rubygems.org'
 ruby '2.2.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
-# Use sqlite3 as the database for Active Record
-gem 'pg'
+# Use postgres as the database for Active Record
+gem 'pg',        group: :production
 # Use SCSS for stylesheets
 gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
@@ -25,6 +25,7 @@ gem 'sdoc',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
+gem 'sqlite3',        group: :development
 gem 'cancan'
 gem 'foundation-rails'
 gem 'rails_12factor'
