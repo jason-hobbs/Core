@@ -1,11 +1,15 @@
 Comment system experiment in Rails 4 and Ruby 2.
 Demo site at core.filarcis.com.
+
 login is test@test.com and Testing1 for the password.
 
 If building you will have to supply:
 
 config/database.yml
 config/secrets.yml
+
+You can get copies of these files at:
+https://github.com/jason-hobbs/configyml
 
 Demo app uses Postgresql.
 
