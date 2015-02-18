@@ -10,7 +10,7 @@
 <div class="row left">
   <div class="small-12 columns">
     <%= label_tag :email %>
-    <%= email_field_tag :email, nil, autofocus: true, required: true, class: "radius entry" %>
+    <%= email_field_tag :email, nil, autofocus: true, required: true, class: "radius entry", :autocomplete => :off %>
   </div>
 </div>
 
@@ -19,7 +19,7 @@
 <div class="row left">
   <div class="small-12 columns">
     <%= label_tag :password %>
-    <%= password_field_tag :password, nil, required: true, class: "radius entry" %>
+    <%= password_field_tag :password, nil, required: true, class: "radius entry", :autocomplete => :off %>
   </div>
 </div>
 
