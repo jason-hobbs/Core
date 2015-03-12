@@ -4,6 +4,7 @@ ruby '2.2.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
 # Use postgres as the database for Active Record
+gem 'dotenv-rails'
 gem 'pg',        group: :production
 # Use SCSS for stylesheets
 gem 'sass-rails'
