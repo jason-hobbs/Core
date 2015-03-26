@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   before_action :get_user
   before_action :get_group
   before_action :get_post, only: [:show, :edit, :update, :destroy ]
-  before_action :get_allowed, only: [:index, :show, :new]
+  before_action :get_allowed
 
   def new
     @post = Post.new

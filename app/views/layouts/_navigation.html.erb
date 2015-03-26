@@ -11,7 +11,6 @@
 
     <% unless controller.controller_name == "dashboards" || controller.controller_name == "users" || controller.controller_name == "tags" || controller.controller_name == "sessions" %>
       <% unless controller.controller_name == 'groups' && controller.action_name != "show" %>
-
           <ul class="left">
           <li><%= link_to '+   Post', new_group_post_path(@group), :class => 'small blue nice button src-download radius'%></li>
           <li>&nbsp;</li>
@@ -26,8 +25,8 @@
             </ul>
           </li>
         </ul>
+        <% end %>
       <% end %>
-    <% end %>
     <ul class="right">
       <%= render 'layouts/navigation_links' %>
     </ul>
