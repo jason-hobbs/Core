@@ -7,6 +7,26 @@
     <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
   </ul>
   <div class="top-bar-section">
+
+
+    <% unless controller.controller_name == "dashboards" || controller.controller_name == "users" || controller.controller_name == "tags" %>
+      <% unless controller.controller_name == 'groups' && controller.action_name != "show" %>
+
+          <ul class="left">
+          <li><%= link_to '+   Post', new_group_post_path(@group)%></li>
+          <li class="has-dropdown">
+            <a href="#"><%= @group.name %></a>
+            <ul class="dropdown">
+              <% @allowed.each do |group| %>
+                <% unless @group.name == group.name %>
+                  <li><%= link_to group.name, group %></li>
+                <% end %>
+              <% end %>
+            </ul>
+          </li>
+        </ul>
+      <% end %>
+    <% end %>
     <ul class="right">
       <%= render 'layouts/navigation_links' %>
     </ul>

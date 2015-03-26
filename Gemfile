@@ -47,10 +47,11 @@ gem 'rails-perftest'
 gem 'ruby-prof'
 gem 'pg_search'
 gem 'responders'
+gem 'pry'
 #gem 'rack-mini-profiler'
 
 # Use unicorn as the app server
-gem 'unicorn'
+#gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
