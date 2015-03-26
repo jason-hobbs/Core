@@ -4,7 +4,7 @@
 <div class="row columns">
   <div class="small-10 columns">
     <h3 id="storyheader" style="float: left;"><%= link_to @group.name, group_path(@group) %> / <%= @post.title %></h3>
-    &nbsp;<span class="label radius"><%= @post.tag.name %></span>
+    &nbsp;<span class='<%= @post.tag.color %> label radius'><%= @post.tag.name %></span>
   </div>
 </div>
 
