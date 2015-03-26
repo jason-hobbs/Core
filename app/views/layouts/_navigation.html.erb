@@ -13,7 +13,8 @@
       <% unless controller.controller_name == 'groups' && controller.action_name != "show" %>
 
           <ul class="left">
-          <li><%= link_to '+   Post', new_group_post_path(@group)%></li>
+          <li><%= link_to '+   Post', new_group_post_path(@group), :class => 'small blue nice button src-download radius'%></li>
+          <li>&nbsp;</li>
           <li class="has-dropdown">
             <a href="#"><%= @group.name %></a>
             <ul class="dropdown">
