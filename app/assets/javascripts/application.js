@@ -16,7 +16,6 @@
 //= require foundation
 //= require turbolinks
 //= require gritter
-//= require ckeditor/override
 //= require ckeditor/init
 //= require_tree .
 
