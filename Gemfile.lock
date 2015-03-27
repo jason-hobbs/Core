@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/galetahub/ckeditor.git
+  revision: 0efddf9a46bbba4aeda562ec0ea77af738404418
+  specs:
+    ckeditor (4.1.1)
+      cocaine
+      orm_adapter (~> 0.5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -53,9 +61,6 @@ GEM
       activesupport (>= 3.0.0)
       uniform_notifier (>= 1.6.0)
     cancan (1.6.10)
-    ckeditor (4.1.1)
-      cocaine
-      orm_adapter (~> 0.5.0)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.7)
@@ -74,7 +79,7 @@ GEM
     erubis (2.7.0)
     execjs (2.4.0)
     fastercsv (1.5.5)
-    foundation-rails (5.5.1.1)
+    foundation-rails (5.5.1.0)
       railties (>= 3.1.0)
       sass (>= 3.3.0, < 3.5)
     globalid (0.3.3)
@@ -107,7 +112,6 @@ GEM
     multi_json (1.11.0)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
-    non-stupid-digest-assets (1.0.4)
     orm_adapter (0.5.0)
     paperclip (4.2.1)
       activemodel (>= 3.0.0)
@@ -211,7 +215,7 @@ DEPENDENCIES
   brakeman
   bullet
   cancan
-  ckeditor
+  ckeditor!
   coffee-rails
   dotenv-rails
   foundation-rails
@@ -219,7 +223,6 @@ DEPENDENCIES
   jbuilder
   jquery-rails
   jquery-turbolinks
-  non-stupid-digest-assets
   paperclip
   pg
   pg_search

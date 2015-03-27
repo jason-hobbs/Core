@@ -38,7 +38,7 @@ gem 'gritter'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt'
-gem 'ckeditor'
+gem 'ckeditor', :git => 'https://github.com/galetahub/ckeditor.git'
 gem 'paperclip'
 gem 'jquery-turbolinks'
 gem 'will_paginate'
@@ -48,7 +48,7 @@ gem 'ruby-prof'
 gem 'pg_search'
 gem 'responders'
 gem 'pry'
-gem 'non-stupid-digest-assets'
+#gem 'non-stupid-digest-assets'
 #gem 'rack-mini-profiler'
 
 # Use unicorn as the app server
