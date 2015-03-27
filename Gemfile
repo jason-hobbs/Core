@@ -48,6 +48,7 @@ gem 'ruby-prof'
 gem 'pg_search'
 gem 'responders'
 gem 'pry'
+gem 'non-stupid-digest-assets'
 #gem 'rack-mini-profiler'
 
 # Use unicorn as the app server
