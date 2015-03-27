@@ -1,5 +1,14 @@
 <!-- <li class="divider"></li> -->
 <!-- <li class="divider"></li> -->
+<% unless controller.controller_name == "dashboards" || controller.controller_name == "users" || controller.controller_name == "tags" || controller.controller_name == "sessions" %>
+  <% unless controller.controller_name == 'groups' && controller.action_name != "show" %>
+    <li class="shadow">
+        <%= form_tag group_posts_path(@group), :class => 'searchform', :method => 'get' do %>
+          <%= text_field_tag :query, params[:query], placeholder: "Search..." %>
+        <% end %>
+    </li>
+  <% end %>
+<% end %>
 <% if current_user_admin? %>
   <li class="shadow"><%= link_to 'Dashboard', dashboards_path %></li>
 <% end %>
