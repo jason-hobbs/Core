@@ -2,7 +2,7 @@ class GroupsController < ApplicationController
   before_action :require_signin
   before_action :require_admin, except: [:show]
   before_action :get_user
-  before_action :current_group, only: [:edit, :update, :destroy, :show]
+  before_action :current_group, only: [:edit, :update, :destroy, :show, :groupposts]
   before_action :get_all_users, only: [:edit, :new]
   before_action :get_allowed, only: [:show]
 
@@ -47,7 +47,11 @@ class GroupsController < ApplicationController
       redirect_to groups_path, :gflash => { :success => "Group deleted" }
   end
 
-
+  def groupposts
+    if @user.groups.find_by(:id=>@group.id)
+      @posts = @group.posts.text_search(params[:query]).includes(:tag).includes(:user).page(params[:page]).per_page(40)
+    end
+  end
 
 
 

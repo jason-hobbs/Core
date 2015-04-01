@@ -1,6 +1,7 @@
 <div class="bodywrapper">
 <br>
-
-<%= render 'layouts/groupcontent' %>
+<div id="groupposts" data-url="<%= groupposts_url(@group) %>">
+  <%= render 'layouts/groupcontent' %>
+</div>
 <%= will_paginate @posts, previous_label: h("<"), next_label: h(">") %>
 </div>

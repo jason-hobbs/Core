@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 
   root 'groups#show', :id => 1
   get 'signin' => 'sessions#new'
+  get 'groupposts/:id', to: 'groups#groupposts', as: 'groupposts'
   resource :session
 
   controller :sessions do
