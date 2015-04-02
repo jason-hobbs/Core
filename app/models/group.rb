@@ -3,5 +3,11 @@ class Group < ActiveRecord::Base
   has_many :posts, dependent: :destroy
   has_many :groupmembers, dependent: :destroy
   has_many :users, through: :groupmembers
-  validates :name, presence: true  
+  validates :name, presence: true
+
+  
+
+
+
+
 end
