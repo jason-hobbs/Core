@@ -59,7 +59,7 @@ class ApplicationController < ActionController::Base
   end
 
   def update_visit
-    time = Time.now.utc
+    time = DateTime.now
     visit = @user.groupmembers.find_by(:group_id => @group.id)
     @last_visit = visit.last_visit
     visit.last_visit = time

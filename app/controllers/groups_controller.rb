@@ -50,6 +50,7 @@ class GroupsController < ApplicationController
 
   def groupposts
     if @user.groups.find_by(:id=>@group.id)
+      update_visit
       @posts = @group.posts.text_search(params[:query]).includes(:tag).includes(:user).page(params[:page]).per_page(40)
     end
   end
