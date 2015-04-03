@@ -6,7 +6,7 @@
           <% @posts.each do |post| %>
 
             <% unless @last_visit.nil? %>
-              <% newcomments = post.replies.where("created_at > ?", @last_visit.to_date) %>
+              <% newcomments = post.replies.where("created_at > ?", @last_visit) %>
             <% end %>
             <tr>
               <% if newcomments.nil? %>
