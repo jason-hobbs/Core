@@ -13,7 +13,7 @@
                 <% newcomments = 0 %>
               <% end %>
               <% if newcomments.size > 0 %>
-                <td colspan="2"><%= link_to post.title, [@group, post] %> New!</td>
+                <td colspan="2"><%= link_to post.title, [@group, post] %> <span title="New comments" id='posttag' class='label'>!</span></td>
               <% else %>
                 <td colspan="2"><%= link_to post.title, [@group, post] %></td>
               <% end %>
