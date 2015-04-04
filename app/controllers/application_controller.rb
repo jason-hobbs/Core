@@ -58,4 +58,12 @@ class ApplicationController < ActionController::Base
     @reply = Reply.find(params[:id])
   end
 
+  def update_visit
+    time = DateTime.now
+    visit = @user.groupmembers.find_by(:group_id => @group.id)
+    @last_visit = visit.last_visit
+    visit.last_visit = time
+    visit.save!
+  end
+
 end
