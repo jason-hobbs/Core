@@ -1,0 +1,11 @@
+<p>A new post was added in <%= link_to @group.name, @group %></p>
+
+<blockquote>
+<%= @post.title %>
+</blockquote>
+
+<blockquote>
+<%= @post.entry %>
+</blockquote>
+
+<p>See it <%= link_to "here", group_post_path(@group, @post) %></p>
