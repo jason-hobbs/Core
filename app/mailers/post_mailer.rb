@@ -5,11 +5,11 @@ class PostMailer < ApplicationMailer
   #
   #   en.post_mailer.new_post.subject
   #
-  def new_post(group, post)
+  def new_post(group, post, member)
     @group = group
     @post = post
 
-    mail to: "jason.hobbs@digisanctum.com", subject: "New post for #{@group.name}"
+    mail to: member.email, subject: "New post for #{@group.name}"
 
   end
 end
