@@ -95,7 +95,7 @@ Rails.application.configure do
     password: ENV["GMAIL_PASSWORD"]
   }
 
-  config.action_mailer.default_url_options = { host: "localhost:3000" }
+  config.action_mailer.default_url_options = { host: ENV["HOST_DOMAIN"] }
 
   config.active_job.queue_adapter = :delayed_job
 
