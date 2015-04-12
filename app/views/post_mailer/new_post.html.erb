@@ -1,0 +1,11 @@
+<h5>A new post was added in <%= link_to @group.name, @group %></h5>
+
+<blockquote>
+<%= @post.title %>
+</blockquote>
+
+<blockquote>
+<%= @post.entry.html_safe %>
+</blockquote>
+
+<h5>See it <%= link_to "here", group_post_url(@group, @post) %></h5>

@@ -48,6 +48,9 @@ gem 'ruby-prof'
 gem 'pg_search'
 gem 'responders'
 gem 'pry'
+gem 'delayed_job_active_record'
+gem 'daemons'
+
 #gem 'non-stupid-digest-assets'
 #gem 'rack-mini-profiler'
 

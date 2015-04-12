@@ -42,6 +42,10 @@ class PostsController < ApplicationController
     @post.group_id = params[:group_id]
     @post.user_id = @user.id
     if @post.save
+      @group.users.each do |member|
+        #PostMailer.new_post(@group, @post, member).deliver_later
+        SendEmailJob.set(wait: 20.seconds).perform_later(@group, @post, member)
+      end
       redirect_to group_path(@group), :gflash => { :success => "Posted successfully" }
     else
       render :new
