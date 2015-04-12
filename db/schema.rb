@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150402160302) do
+ActiveRecord::Schema.define(version: 20150412002622) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "ckeditor_assets", force: :cascade do |t|
-    t.string   "data_file_name",    limit: 255, null: false
-    t.string   "data_content_type", limit: 255
+    t.string   "data_file_name",               null: false
+    t.string   "data_content_type"
     t.integer  "data_file_size"
     t.integer  "assetable_id"
     t.string   "assetable_type",    limit: 30
@@ -37,6 +37,22 @@ ActiveRecord::Schema.define(version: 20150402160302) do
     t.datetime "updated_at"
   end
 
+  create_table "delayed_jobs", force: :cascade do |t|
+    t.integer  "priority",   default: 0, null: false
+    t.integer  "attempts",   default: 0, null: false
+    t.text     "handler",                null: false
+    t.text     "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string   "locked_by"
+    t.string   "queue"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
+
   create_table "groupmembers", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "group_id"
@@ -47,7 +63,7 @@ ActiveRecord::Schema.define(version: 20150402160302) do
   add_index "groupmembers", ["user_id"], name: "index_groupmembers_on_user_id", using: :btree
 
   create_table "groups", force: :cascade do |t|
-    t.string   "name",       limit: 255
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -78,21 +94,21 @@ ActiveRecord::Schema.define(version: 20150402160302) do
   add_index "replies", ["user_id"], name: "index_replies_on_user_id", using: :btree
 
   create_table "tags", force: :cascade do |t|
-    t.string   "name",       limit: 255
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "color",      limit: 255
+    t.string   "color"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "name",               limit: 255
-    t.string   "email",              limit: 255
-    t.string   "password_digest",    limit: 255
-    t.boolean  "admin",                          default: false
+    t.string   "name"
+    t.string   "email"
+    t.string   "password_digest"
+    t.boolean  "admin",              default: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "photo_file_name",    limit: 255
-    t.string   "photo_content_type", limit: 255
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
   end
