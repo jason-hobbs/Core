@@ -43,7 +43,7 @@ class ApplicationController < ActionController::Base
   helper_method :get_user
 
   def get_group
-    @group = Group.find(params[:group_id])
+    @group = Group.find_by(slug: params[:group_id])
   end
 
   def get_post

@@ -39,7 +39,8 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    @post.group_id = params[:group_id]
+    #@post.group_id = params[:group_id]
+    @post.group_id = @group.id
     @post.user_id = @user.id
     if @post.save
       @group.users.each do |member|

@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :dashboards, only: [:index]
 
 
-  root 'groups#show', :id => 1
+  root 'groups#show', :id => 'community'
   get 'signin' => 'sessions#new'
   get 'groupposts/:id', to: 'groups#groupposts', as: 'groupposts'
   resource :session

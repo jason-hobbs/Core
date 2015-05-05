@@ -11,7 +11,7 @@ class GroupsController < ApplicationController
   end
 
   def show
-    if @user.groups.find_by(:id=>@group.id)
+    if @user.groups.find_by(id: @group.id)
       update_visit
       @posts = @group.posts.order(created_at: :desc).includes(:tag).includes(:user).page(params[:page]).per_page(40)
     else
@@ -36,6 +36,7 @@ class GroupsController < ApplicationController
   end
 
   def update
+    @group.slug = params[:name]
     if @group.update(group_params)
       redirect_to @group, :gflash => { :success => "Group updated!" }
     else
@@ -65,10 +66,10 @@ class GroupsController < ApplicationController
   end
 
   def current_group
-    @group = Group.find(params[:id])
+    @group = Group.find_by(slug: params[:id])
   end
 
   def group_params
-    params.require(:group).permit(:name, user_ids: [])
+    params.require(:group).permit(:name, :slug, user_ids: [])
   end
 end

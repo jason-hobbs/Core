@@ -5,3 +5,4 @@ $('#storyheader').append("<%= j render partial: 'showheader' %>")
 $("#posttag").empty();
 $('#posttag').append("<%= j render partial: 'showposttag' %>")
 $('#posttag').removeClass('alert default info secondary success warning').addClass('<%= @post.tag.color %>');
+window.history.replaceState(null, null, "/groups/<%= @group.slug %>/posts/<%= @post.id %>");
