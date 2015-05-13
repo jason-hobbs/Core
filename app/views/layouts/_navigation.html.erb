@@ -12,21 +12,48 @@
     <% unless controller.controller_name == "dashboards" || controller.controller_name == "users" || controller.controller_name == "tags" || controller.controller_name == "sessions" %>
       <% unless controller.controller_name == 'groups' && controller.action_name != "show" %>
           <ul class="left">
-          <li><%= link_to '+   Post', new_group_post_path(@group), :class => 'small blue nice button src-download radius'%></li>
-          <li>&nbsp;</li>
-          <li class="has-dropdown">
-            <a href="#"><%= @group.name %></a>
-            <ul class="dropdown">
-              <% @allowed.each do |group| %>
-                <% unless @group.name == group.name %>
-                  <li><%= link_to group.name, group_path(group) %></li>
+            <li><%= link_to '+   Post', new_group_post_path(@group), :class => 'small blue nice button src-download radius'%></li>
+            <li>&nbsp;</li>
+            <li class="has-dropdown">
+              <a href="#"><%= @group.name %></a>
+              <ul class="dropdown">
+                <% @allowed.each do |group| %>
+                  <% unless @group.name == group.name %>
+                    <li><%= link_to group.name, group_path(group) %></li>
+                  <% end %>
                 <% end %>
-              <% end %>
-            </ul>
-          </li>
-        </ul>
-        <% end %>
+              </ul>
+            </li>
+          </ul>
+
       <% end %>
+    <% end %>
+
+    <% if controller.controller_name == 'groups' && controller.action_name == "show" %>
+          <ul class="left">
+            <li>&nbsp;</li>
+            <li class="has-dropdown">
+              <a href="#"><%= @tagname %></a>
+              <ul class="dropdown">
+                <% unless @tagname == 'All' %>
+                  <li><%= link_to 'All', group_path(@group) %></li>
+                <% end %>
+                <% @tags.each do |tag| %>
+                  <% unless @tagname == tag.name %>
+                    <li><%= link_to tag.name, group_path(@group, tag: tag.name) %></li>
+                  <% end %>
+                <% end %>
+              </ul>
+            </li>
+          </ul>
+    <% end %>
+
+
+
+
+
+
+
     <ul class="right">
       <%= render 'layouts/navigation_links' %>
     </ul>

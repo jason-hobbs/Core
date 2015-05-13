@@ -66,4 +66,8 @@ class ApplicationController < ActionController::Base
     visit.save!
   end
 
+  def get_tags
+    @tags = Tag.all.order(:name)
+  end
+
 end
