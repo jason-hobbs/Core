@@ -30,6 +30,7 @@ gem 'sqlite3',        group: :development
 gem 'cancan'
 gem 'foundation-rails'
 gem 'rails_12factor'
+gem 'thin'
 
 group :development do
   gem 'brakeman', :require => false
