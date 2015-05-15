@@ -1,12 +1,4 @@
 GIT
-  remote: https://github.com/galetahub/ckeditor.git
-  revision: 16dc5d233e48b5d9a52c8d60923c6a86f366f8cd
-  specs:
-    ckeditor (4.1.1)
-      cocaine
-      orm_adapter (~> 0.5.0)
-
-GIT
   remote: https://github.com/rails/turbolinks.git
   revision: d2e5b4863a2425155d050b965778d8550d8958e1
   specs:
@@ -68,6 +60,9 @@ GEM
       activesupport (>= 3.0.0)
       uniform_notifier (~> 1.9.0)
     cancan (1.6.10)
+    ckeditor (4.1.1)
+      cocaine
+      orm_adapter (~> 0.5.0)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.7)
@@ -227,7 +222,7 @@ DEPENDENCIES
   brakeman
   bullet
   cancan
-  ckeditor!
+  ckeditor
   coffee-rails
   daemons
   delayed_job_active_record
