@@ -45,6 +45,10 @@ class RepliesController < ApplicationController
     @reply.user_id = @user.id
     respond_to do |format|
       if @reply.save
+        @group.users.each do |member|
+          #ReplyMailer.new_reply(@group, @post, @reply, member).deliver_now
+          SendEmailJob2.set(wait: 20.seconds).perform_later(@group, @post, @reply, member)
+        end
         #redirect_to group_post_path(@group, @post, :anchor => "end"), :gflash => { :success => "Posted successfully" }
         format.js {render :addnewreply}
       else

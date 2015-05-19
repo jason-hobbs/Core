@@ -1,0 +1,6 @@
+A new reply was added in <%= @group.name %>/<%= @post.title %>
+
+<%= @reply.entry.html_safe %>
+
+See it here:
+<%= group_post_url(@group, @post) %>
