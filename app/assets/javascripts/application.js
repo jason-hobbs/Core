@@ -21,6 +21,10 @@
 
 $(function(){ $(document).foundation(); });
 
+$(function() {
+  var faye = new Faye.Client('http://localhost:9292/faye');
+});
+
 $(".reply-cancel").click(function(){
   $(".head").hide();
 });

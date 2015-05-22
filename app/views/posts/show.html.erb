@@ -42,6 +42,13 @@
   <%= render "layouts/add_reply" %>
 </div>
 
-
-
 </div>
+
+<script language="javascript">
+  $(function() {
+    var faye = new Faye.Client('http://localhost:9292/faye');
+    faye.subscribe('/replies/new', function (data) {
+      eval(data);
+    });
+  });
+</script>

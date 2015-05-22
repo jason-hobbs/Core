@@ -1,4 +1,6 @@
-$('#replies').append("<%= j render partial: 'addnewreply' %>")
+<% broadcast "/replies/new" do %>
+  $('#replies').append("<%= j render partial: 'addnewreply' %>")
+<% end %>
 //$('#add-reply').empty();
 $('#error_explanation').remove();
 //$('#add-reply').append("<%= j render partial: 'layouts/add_reply' %>")

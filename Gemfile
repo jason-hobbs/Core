@@ -31,6 +31,7 @@ gem 'cancan'
 gem 'foundation-rails'
 gem 'rails_12factor'
 gem 'thin'
+gem 'faye'
 
 group :development do
   gem 'brakeman', :require => false
