@@ -47,6 +47,7 @@
 <script language="javascript">
   $(function() {
     var faye = new Faye.Client('http://localhost:9292/faye');
+    faye.unsubscribe('/replies/<%= @post.id %>');
     faye.subscribe('/replies/<%= @post.id %>', function (data) {
       eval(data);
     });

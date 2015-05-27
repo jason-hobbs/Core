@@ -29,7 +29,7 @@ gem 'spring',        group: :development
 gem 'sqlite3',        group: :development
 gem 'cancan'
 gem 'foundation-rails'
-gem 'rails_12factor'
+#gem 'rails_12factor'
 gem 'thin'
 gem 'faye'
 
