@@ -11,7 +11,7 @@
     <%= stylesheet_link_tag    "application" %>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
     <%= javascript_include_tag "vendor/modernizr" %>
-    <%= javascript_include_tag "application", "http://localhost:9292/faye.js" %>
+    <%= javascript_include_tag "application", "#{ENV['SERVER']}/faye.js" %>
     <%= csrf_meta_tags %>
   </head>
 
