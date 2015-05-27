@@ -1,4 +1,4 @@
-<% broadcast "/replies/new" do %>
+<% broadcast "/replies/#{@post.id}" do %>
   $('#replies').append("<%= j render partial: 'addnewreply' %>")
 <% end %>
 //$('#add-reply').empty();
