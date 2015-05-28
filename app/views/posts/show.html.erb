@@ -32,7 +32,7 @@
   </div>
 </div>
 
-<div id="replies" data-url="<%= group_post_replies_url(@group, @post) %>">
+<div id="replies_<%= @group.id %>_<%= @post.id %>" data-url="<%= group_post_replies_url(@group, @post) %>">
 
     <%= render 'replies/getit' %>
 
@@ -46,10 +46,8 @@
 
 <script language="javascript">
   $(function() {
-
-      var faye = new Faye.Client('<%= ENV['SERVER'] %>/faye');
-
-    faye.unsubscribe('/replies/<%= @post.id %>');
+    var faye = new Faye.Client('<%= ENV['SERVER'] %>/faye');
+    //faye.unsubscribe('/replies/<%= @post.id %>');
     faye.subscribe('/replies/<%= @post.id %>', function (data) {
       eval(data);
     });

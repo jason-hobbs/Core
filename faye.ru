@@ -26,21 +26,21 @@ end
 
 faye_server = Faye::RackAdapter.new(:mount => '/faye', :timeout => 10)
 faye_server.add_extension(ServerAuth.new)
-faye_server.add_extension(OneSub.new)
-faye_server.on(:handshake) do |client_id|
+#faye_server.add_extension(OneSub.new)
+#faye_server.on(:handshake) do |client_id|
   #puts "#{client_id} handshake"
-end
-faye_server.on(:subscribe) do |client_id, channel|
-  puts "#{client_id} subscribed to #{channel}"
-end
-faye_server.on(:unsubscribe) do |client_id, channel|
-  puts "#{client_id} unsubscribed to #{channel}"
-end
-faye_server.on(:publish) do |client_id, channel, data|
-  puts "#{client_id} published #{data} to #{channel}"
-end
-faye_server.on(:disconnect) do |client_id|
-  puts "#{client_id} disconnected"
-end
+#end
+#faye_server.on(:subscribe) do |client_id, channel|
+#  puts "#{client_id} subscribed to #{channel}"
+#end
+#faye_server.on(:unsubscribe) do |client_id, channel|
+#  puts "#{client_id} unsubscribed to #{channel}"
+#end
+#faye_server.on(:publish) do |client_id, channel, data|
+#  puts "#{client_id} published #{data} to #{channel}"
+#end
+#faye_server.on(:disconnect) do |client_id|
+#  puts "#{client_id} disconnected"
+#end
 
 run faye_server

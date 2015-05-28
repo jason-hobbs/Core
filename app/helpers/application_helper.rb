@@ -6,7 +6,8 @@ module ApplicationHelper
   def broadcast(channel, &block)
     message = {:channel => channel, :data => capture(&block), :ext => {:auth_token => FAYE_TOKEN}}
     uri = URI.parse("#{ENV['SERVER']}/faye")
-    Net::HTTP.post_form(uri, :message => message.to_json)
+    res = Net::HTTP.post_form(uri, :message => message.to_json)
+    #puts "RESPONSE FOR BROADCAST: #{res.body}"
   end
 
 end
