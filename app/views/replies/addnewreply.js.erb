@@ -1,8 +1,5 @@
-$('#replies').append("<%= j render partial: 'addnewreply' %>")
-//$('#add-reply').empty();
+<% broadcast "/replies/#{@post.id}" do %>
+  $('#replies_<%= @group.id %>_<%= @post.id %>').append("<%= j render partial: 'addnewreply' %>")
+<% end %>
 $('#error_explanation').remove();
-//$('#add-reply').append("<%= j render partial: 'layouts/add_reply' %>")
-//for(var i in CKEDITOR.instances) {
-//    CKEDITOR.instances[i].setData(' ');
-//}
 CKEDITOR.instances.newreply.setData('');
