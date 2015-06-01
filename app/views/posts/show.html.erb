@@ -46,10 +46,13 @@
 
 <script language="javascript">
   $(function() {
-    var faye = new Faye.Client('<%= ENV['SERVER'] %>/faye');
-    //faye.unsubscribe('/replies/<%= @post.id %>');
-    faye.subscribe('/replies/<%= @post.id %>', function (data) {
-      eval(data);
-    });
+    if(typeof faye==="undefined"){
+      var faye = new Faye.Client('<%= ENV['SERVER'] %>/faye');
+    }
+    if(typeof sub<%= @post.id %>==="undefined"){
+      sub<%= @post.id %> = faye.subscribe('/replies/<%= @post.id %>', function (data) {
+        eval(data);
+      });
+    }
   });
 </script>
