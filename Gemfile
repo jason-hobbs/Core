@@ -40,7 +40,7 @@ gem 'gritter'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt'
-gem 'ckeditor'
+gem 'ckeditor', '=4.1.1'
 gem 'paperclip'
 gem 'jquery-turbolinks'
 gem 'will_paginate'
