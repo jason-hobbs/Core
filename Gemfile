@@ -32,6 +32,7 @@ gem 'foundation-rails'
 #gem 'rails_12factor'
 gem 'thin'
 gem 'faye'
+gem 'rspec'
 
 group :development do
   gem 'brakeman', :require => false
