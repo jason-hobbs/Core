@@ -21,13 +21,26 @@
 
 $(function(){ $(document).foundation(); });
 
+
+$(function() {
+  $('tr').hover(function() {
+    $(this).css('background-color', '#F2F8FA');
+    $(this).contents('td:first').css('border-left', '5px solid #074E68');
+  },
+  function() {
+    $(this).css('background-color', '#FFFFFF');
+    $(this).contents('td:first').css('border-left', '5px solid #FFFFFF');
+  });
+});
+
+
 $(".reply-cancel").click(function(){
   $(".head").hide();
 });
 
 //$(function(){
 //  var faye = new Faye.Client('<%= ENV['SERVER'] %>/faye');
-//});  
+//});
 
 jQuery.extend($.gritter.options,{time:1000,});
 

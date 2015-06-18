@@ -2,7 +2,7 @@
   <div class="small-12 columns">
     <% if @posts %>
       <table>
-        <tbody id="posts">
+        <tbody>
           <% @posts.each do |post| %>
 
             <% unless @last_visit.nil? %>
@@ -13,9 +13,9 @@
                 <% newcomments = 0 %>
               <% end %>
               <% if newcomments.size > 0 %>
-                <td colspan="2"><%= link_to post.title, [@group, post] %> <span title="New comments" id='posttag' class='label'>!</span></td>
+                <td style="border-left: 5px solid rgb(255, 255, 255);" colspan="2"><%= link_to post.title, [@group, post] %> <span title="New comments" id='posttag' class='label'>!</span></td>
               <% else %>
-                <td colspan="2"><%= link_to post.title, [@group, post] %></td>
+                <td style="border-left: 5px solid rgb(255, 255, 255);" colspan="2"><%= link_to post.title, [@group, post] %></td>
               <% end %>
               <td><%= distance_of_time_in_words(post.created_at, Time.now) %> ago</td>
               <td><span class='<%= post.tag.color %> label radius'><%= post.tag.name %></span></td>

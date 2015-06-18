@@ -122,27 +122,17 @@ h3 {
 }
 
 table {
+  border-spacing: 0px;
+  border: none;
 	table-layout: fixed;
   font-size: medium;
 	width: 100%;
-	border: none;
-	padding: 0px;
-	border-spacing: 0px;
 
-    th {
-    	background-color: #fff;
-    	border-bottom-style: solid;
-    	border-bottom-color: #8e8e8e;
-    	border-bottom-width: 1px;
-
-    }
 	td {
-		/*word-wrap: break-word;*/
 		white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 	}
-
 }
 
 .right-collapse {
@@ -542,4 +532,8 @@ margin-left: 2px;
 
 .title-area {
   padding-right: 50px;
+}
+
+#firsttd td {
+  border-left: 5px solid #FFFFFF;
 }
