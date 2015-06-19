@@ -25,12 +25,18 @@ $(function(){ $(document).foundation(); });
 $(function() {
   $('tr').hover(function() {
     $(this).css('background-color', '#F2F8FA');
+    $(this).css('cursor', 'pointer');
     $(this).contents('td:first').css('border-left', '5px solid #074E68');
   },
   function() {
     $(this).css('background-color', '#FFFFFF');
     $(this).contents('td:first').css('border-left', '5px solid #FFFFFF');
   });
+});
+
+$(document).on("click", "tr", function() {
+  var link  = $(this).data("href")
+  Turbolinks.visit(link);
 });
 
 
