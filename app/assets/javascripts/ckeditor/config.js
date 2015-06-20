@@ -6,6 +6,8 @@
 CKEDITOR.editorConfig = function( config ) {
   config.uiColor = '#f4f4f4';
   config.language = 'en';
+  /*config.skin = 'minimalist,/assets/minimalist/';*/
+  config.skin = 'office2013';
   config.filebrowserBrowseUrl = "/ckeditor/attachment_files";
   config.filebrowserFlashBrowseUrl = "/ckeditor/attachment_files";
   config.filebrowserFlashUploadUrl = "/ckeditor/attachment_files";
