@@ -13,7 +13,7 @@
                 <% newcomments = 0 %>
               <% end %>
               <% if newcomments.size > 0 %>
-                <td style="border-left: 5px solid rgb(255, 255, 255);" colspan="2"><%= post.title %> <span title="New comments" id='posttag' class='label'>!</span></td>
+                <td style="border-left: 5px solid rgb(255, 255, 255);" colspan="2"><%= post.title %> <%= image_tag("exclamation2.png", size: "15x15") %></td>
               <% else %>
                 <td style="border-left: 5px solid rgb(255, 255, 255);" colspan="2"><%= post.title %></td>
               <% end %>
