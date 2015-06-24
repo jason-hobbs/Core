@@ -2,7 +2,7 @@
   <div class="small-12 columns">
     <% if @posts %>
       <table id="postrows">
-        <tbody>
+        <tbody id="posts">
           <% @posts.each do |post| %>
 
             <% unless @last_visit.nil? %>

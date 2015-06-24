@@ -21,7 +21,7 @@ class PostsController < ApplicationController
   def index
     if @user.groups.find_by(:id=>@group.id)
       #@posts = @group.posts.where('title @@ ? or entry @@ ?', "#{params[:search]}", "#{params[:search]}" ).order('created_at desc').includes(:tag).includes(:user)
-      @posts = @group.posts.text_search(params[:query]).includes(:tag).includes(:user).page(params[:page]).per_page(40)
+      @posts = @group.posts.text_search(params[:query]).includes(:tag).includes(:user).page(params[:page]).per_page(20)
     else
       redirect_to root_path, :gflash => { :notice => "Not authorized for group" }
     end
