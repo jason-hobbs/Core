@@ -1,3 +1,7 @@
+{<img src="https://codeclimate.com/github/jason-hobbs/Core/badges/gpa.svg" />}[https://codeclimate.com/github/jason-hobbs/Core]
+{<img alt="Status?branch=master" src="https://codeship.com/projects/4fd3f560-efbb-0132-1299-467c643acace/status?branch=master" />}[https://codeship.com/projects/84398]
+
+
 Comment system experiment in Rails 4 and Ruby 2.
 Demo site at core.filarcis.com.
 
