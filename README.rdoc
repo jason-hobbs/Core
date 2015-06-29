@@ -3,7 +3,7 @@
 
 
 Comment system experiment in Rails 4 and Ruby 2.
-Demo site at core.filarcis.com.
+Demo site at https://limitless-citadel-4467.herokuapp.com/
 
 login is test@test.com and Testing1 for the password.
 
