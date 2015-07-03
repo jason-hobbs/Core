@@ -54,6 +54,13 @@ $(document).ready(
             fade_out_speed: 100, // how fast the notices fade out
             time: 500 // hang on the screen for...
           });
+
+      $("#postrows tr").click(function() {
+        var link  = $(this).data("href");
+        $(this).css('background-color', '#FFFFFF');
+        $(this).contents('td:first').css('border-left', '5px solid #FFFFFF');
+        Turbolinks.visit(link);
+      });
 });
 
 $('.post-header').click(function(){
