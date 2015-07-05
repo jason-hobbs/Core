@@ -56,6 +56,8 @@ GEM
       ruby_parser (~> 3.7.0)
       sass (~> 3.0)
       terminal-table (~> 1.4)
+    bugsnag (2.8.10)
+      json (~> 1.7, >= 1.7.7)
     builder (3.2.2)
     bullet (4.14.7)
       activesupport (>= 3.0.0)
@@ -263,6 +265,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt
   brakeman
+  bugsnag
   bullet
   cancan
   ckeditor (= 4.1.1)
