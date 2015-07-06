@@ -146,6 +146,7 @@ GEM
     mini_portile (0.6.2)
     minitest (5.7.0)
     multi_json (1.11.1)
+    newrelic_rpm (3.12.1.298)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
@@ -279,6 +280,7 @@ DEPENDENCIES
   jbuilder
   jquery-rails
   jquery-turbolinks
+  newrelic_rpm
   paperclip
   pg
   pg_search
