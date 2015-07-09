@@ -3,7 +3,7 @@
     <% if @posts %>
       <table id="postrows">
         <tbody id="posts">
-          <% @posts.find_each do |post| %>
+          <% @posts.each do |post| %>
             <% unless @last_visit.nil? %>
               <% newcomments = post.replies.where("created_at > ?", @last_visit) %>
             <% end %>
