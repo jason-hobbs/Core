@@ -23,6 +23,7 @@ config/initializers/secret_token.rb
 #config/database.yml
 config/newrelic.yml
 config/initializers/bugsnag.rb
+config/skylight.yml
 
 ## Environment normalisation:
 /.bundle
