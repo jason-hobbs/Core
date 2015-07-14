@@ -88,13 +88,12 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com",
+    address: 'smtp.mandrillapp.com',
     port: 587,
-    domain: "example.com",
-    authentication: "plain",
     enable_starttls_auto: true,
-    user_name: ENV["GMAIL_USERNAME"],
-    password: ENV["GMAIL_PASSWORD"]
+    user_name: 'jason.hobbs@digisanctum.com',
+    password: ENV["MANDRILL_KEY"],
+    authentication: 'login'
   }
 
   config.action_mailer.default_url_options = { host: ENV["HOST_DOMAIN"] }
