@@ -56,8 +56,6 @@ GEM
       ruby_parser (~> 3.7.0)
       sass (~> 3.0)
       terminal-table (~> 1.4)
-    bugsnag (2.8.10)
-      json (~> 1.7, >= 1.7.7)
     builder (3.2.2)
     bullet (4.14.7)
       activesupport (>= 3.0.0)
@@ -199,6 +197,7 @@ GEM
     rdoc (4.2.0)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
+    rollbar (2.1.1)
     rspec (3.3.0)
       rspec-core (~> 3.3.0)
       rspec-expectations (~> 3.3.0)
@@ -229,8 +228,6 @@ GEM
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
     sexp_processor (4.6.0)
-    skylight (0.6.1)
-      activesupport (>= 3.0.0)
     slop (3.6.0)
     spring (1.3.6)
     sprockets (3.2.0)
@@ -269,7 +266,6 @@ PLATFORMS
 DEPENDENCIES
   bcrypt
   brakeman
-  bugsnag
   bullet
   cancan
   ckeditor (= 4.1.1)
@@ -292,11 +288,11 @@ DEPENDENCIES
   rails
   rails-perftest
   responders
+  rollbar (~> 2.1.1)
   rspec
   ruby-prof
   sass-rails
   sdoc
-  skylight
   spring
   sqlite3
   thin
@@ -306,4 +302,4 @@ DEPENDENCIES
   will_paginate
 
 BUNDLED WITH
-   1.10.5
+   1.10.6
