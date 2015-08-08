@@ -55,6 +55,7 @@ gem 'delayed_job_active_record'
 gem 'daemons'
 gem 'newrelic_rpm'
 gem 'rollbar', '~> 2.1.1'
+gem 'profile_it', '~> 0.2.9'
 #gem 'non-stupid-digest-assets'
 #gem 'rack-mini-profiler'
 
