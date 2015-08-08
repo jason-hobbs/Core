@@ -26,6 +26,7 @@ config/newrelic.yml
 config/initializers/bugsnag.rb
 config/initializers/rollbar.rb
 config/skylight.yml
+config/profile_it.yml
 
 ## Environment normalisation:
 /.bundle
