@@ -36,6 +36,8 @@ gem 'rspec'
 
 group :development do
   gem 'brakeman', :require => false
+  gem 'rack-mini-profiler'
+  gem 'traceroute'
 end
 gem 'gritter'
 

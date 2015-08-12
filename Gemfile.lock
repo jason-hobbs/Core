@@ -160,11 +160,14 @@ GEM
       activerecord (>= 3.1)
       activesupport (>= 3.1)
       arel
+    profile_it (0.2.9)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
     rack (1.6.4)
+    rack-mini-profiler (0.9.7)
+      rack (>= 1.1.3)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.3)
@@ -245,6 +248,8 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (1.4.1)
+    traceroute (0.5.0)
+      rails (>= 3.0.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (2.7.1)
@@ -284,7 +289,9 @@ DEPENDENCIES
   paperclip
   pg
   pg_search
+  profile_it (~> 0.2.9)
   pry
+  rack-mini-profiler
   rails
   rails-perftest
   responders
@@ -296,6 +303,7 @@ DEPENDENCIES
   spring
   sqlite3
   thin
+  traceroute
   turbolinks!
   uglifier
   unicorn
