@@ -159,6 +159,7 @@ GEM
       activerecord (>= 3.1)
       activesupport (>= 3.1)
       arel
+    profile_it (0.2.9)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -282,6 +283,7 @@ DEPENDENCIES
   paperclip
   pg
   pg_search
+  profile_it (~> 0.2.9)
   pry
   rack-mini-profiler
   rails
