@@ -22,9 +22,6 @@ module Core
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.assets.enabled = true
-    config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
-    config.assets.precompile += Ckeditor.assets
-    config.assets.precompile += %w(ckeditor/*)
     config.active_record.raise_in_transactional_callbacks = true
   end
 end

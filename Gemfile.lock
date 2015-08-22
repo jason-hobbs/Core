@@ -61,9 +61,6 @@ GEM
       activesupport (>= 3.0.0)
       uniform_notifier (~> 1.9.0)
     cancan (1.6.10)
-    ckeditor (4.1.1)
-      cocaine
-      orm_adapter (~> 0.5.0)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.7)
@@ -112,6 +109,8 @@ GEM
     faye-websocket (0.10.0)
       eventmachine (>= 0.12.0)
       websocket-driver (>= 0.5.1)
+    font-awesome-rails (4.4.0.0)
+      railties (>= 3.2, < 5.0)
     foundation-rails (5.5.2.1)
       railties (>= 3.1.0)
       sass (>= 3.3.0, < 3.5)
@@ -147,7 +146,6 @@ GEM
     newrelic_rpm (3.13.0.299)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
-    orm_adapter (0.5.0)
     paperclip (4.3.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -258,6 +256,9 @@ GEM
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
     will_paginate (3.0.7)
+    wysiwyg-rails (1.2.8)
+      font-awesome-rails (>= 4.3.0.0)
+      railties (>= 3.2, < 5.0)
 
 PLATFORMS
   ruby
@@ -267,13 +268,13 @@ DEPENDENCIES
   brakeman
   bullet
   cancan
-  ckeditor (= 4.1.1)
   coffee-rails
   daemons
   dalli
   delayed_job_active_record
   dotenv-rails
   faye
+  font-awesome-rails
   foundation-rails
   gritter
   jbuilder
@@ -301,6 +302,7 @@ DEPENDENCIES
   turbolinks!
   uglifier
   will_paginate
+  wysiwyg-rails
 
 BUNDLED WITH
    1.10.6

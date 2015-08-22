@@ -12,7 +12,7 @@
   <% end %>
 
 
-    <%= f.cktext_area :entry %>
+    <%= f.text_area :entry, :id => 'editreply' %>
   <br>
 
 
@@ -20,3 +20,12 @@
 
 
 <%end%>
+
+
+<script>
+  $(function() {
+    $('textarea#editreply').editable({
+      inlineMode: false
+    })
+  });
+</script>

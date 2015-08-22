@@ -22,7 +22,7 @@
 
     <%= f.label "Entry", class: "bold" %><br>
     <hr class="linespace">
-    <%= f.cktext_area :entry %>
+    <%= f.text_area :entry, :id => 'editreply' %>
 <br>
 
 
@@ -31,3 +31,11 @@
     <%= f.submit "Edit Post", class: 'button tiny radius' %> <%= link_to 'Cancel', group_post_path(@group, @post), class: "button tiny radius", :remote => true %>
 
 <%end%>
+
+<script>
+  $(function() {
+    $('textarea#editreply').editable({
+      inlineMode: false
+    })
+  });
+</script>

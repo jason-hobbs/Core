@@ -30,7 +30,7 @@
   <div class="small-12 medium-8 columns">
     <%= f.label "Entry", class: "bold" %><br>
     <hr class="linespace">
-    <%= f.cktext_area :entry %>
+    <%= f.text_area :entry, :id => 'newreply' %>
   </div>
 </div>
 
@@ -41,3 +41,11 @@
     <%= f.submit "Create Post", class: 'button tiny radius' %>
 
 <%end%>
+
+<script>
+  $(function() {
+    $('textarea#newreply').editable({
+      inlineMode: false
+    })
+  });
+</script>

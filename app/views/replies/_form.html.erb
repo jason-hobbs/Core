@@ -10,7 +10,15 @@
       </ul>
     </div>
   <% end %>
-  <%= f.cktext_area :entry, :id => "newreply" %>
+  <%= f.text_area :entry, :id => "brandnewreply" %>
   <br>
   <%= f.submit "Reply", class: 'button tiny radius' %>
 <%end%>
+
+<script>
+  $(function() {
+    $('textarea#brandnewreply').editable({
+      inlineMode: false
+    })
+  });
+</script>

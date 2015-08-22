@@ -11,7 +11,7 @@
       </div>
       <div class="post-body" id="addreply">
         <%= form_for [@group, @post, @reply], remote:true do |f| %>
-          <%= f.cktext_area :entry, :id => "newreply" %>
+          <%= f.text_area :entry, :id => "newreply" %>
           <br>
           <%= f.submit "Reply", class: 'button tiny radius' %>
         <%end%>
@@ -19,3 +19,11 @@
     </div>
   </div>
 </div>
+
+<script>
+  $(function() {
+    $('textarea#newreply').editable({
+      inlineMode: false
+    })
+  });
+</script>
