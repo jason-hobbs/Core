@@ -2,4 +2,4 @@
   $('#replies_<%= @group.id %>_<%= @post.id %>').append("<%= j render partial: 'addnewreply' %>")
 <% end %>
 $('#error_explanation').remove();
-CKEDITOR.instances.newreply.setData('');
+$('textarea#brandnewreply').editable('clearSelection');
