@@ -1,4 +1,4 @@
-<h5>A new reply was added in <%= link_to @group.name, @group %>/<%= link_to @post.title, group_post_url(@group, @post) %></h5>
+<h5>A new reply was added in <%= link_to @group.name, @group %>/<%= link_to @post.title, group_post_url(@group, @post) %> by <%= @reply.user.name %></h5>
 
 <blockquote>
 <%= @reply.entry.html_safe %>

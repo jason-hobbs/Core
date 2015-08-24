@@ -1,4 +1,4 @@
-<h5>A new post was added in <%= link_to @group.name, @group %></h5>
+<h5>A new post was added in <%= link_to @group.name, @group %> by <%= @post.user.name %></h5>
 
 <blockquote>
 <%= @post.title %>
