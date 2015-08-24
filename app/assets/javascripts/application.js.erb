@@ -22,8 +22,6 @@
 
 $(function(){ $(document).foundation(); });
 
-$.Editable.DEFAULTS.key = '<%= ENV['FROALA_KEY'] %>';
-
 $(document).on("mouseenter", "#postrows tr", function() {
   $(this).css('background-color', '#F2F8FA');
   $(this).css('cursor', 'pointer');
