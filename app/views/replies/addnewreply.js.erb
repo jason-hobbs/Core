@@ -2,7 +2,4 @@
   $('#replies_<%= @group.id %>_<%= @post.id %>').append("<%= j render partial: 'addnewreply' %>")
 <% end %>
 $('#error_explanation').remove();
-$('#brandnewreply').editable('clearSelection');
-$('#brandnewreply').editable('option', 'placeholder', 'Placeholder');
-$("#brandnewreply").editable("insertHTML", "", true);
-$("#brandnewreply").editable("sync");
+$('textarea#newreply').editable('clearSelection');
