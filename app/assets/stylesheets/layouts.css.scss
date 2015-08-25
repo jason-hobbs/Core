@@ -473,7 +473,8 @@ outline: none;
   border: 1px solid #ddd;
   border-radius: 3px;
   margin-bottom: 15px;
-  overflow: hidden;
+  /*overflow: hidden;*/
+  overflow: visible;
 }
 
 .post-header {
