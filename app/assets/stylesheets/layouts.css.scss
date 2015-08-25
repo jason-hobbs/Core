@@ -142,45 +142,6 @@ table {
 
 }
 
-.side-nav {
-    a:link {
-      text-decoration: none;
-
-    }
-	.wrap-nav {
-	  height: 30px;
-	  padding: 5px;
-	  padding-top: 7px;
-    /*min-width: 155px;*/
-    max-width: 200px;
-	}
-	.wrap-nav:hover {
-	  background-color: #d7d7d7;
-	  border-radius:5px;
-	}
-
-  .mobile:active {
-    background-color: #d7d7d7;
-    border-radius:5px;
-  }
-  .mobile:hover {
-    background-color: #fff;
-  }
-
-	.entry {
-	  float: left;
-	}
-	.entry-right {
-	  float: right;
-
-	}
-	.active {
-      background-color: #2299BB;
-      border-radius:5px;
-      color: #fff;
-
-	}
-}
 
 
 
@@ -233,36 +194,7 @@ table {
 
 
 
-.entry-nav:hover {
-  background-color: #d7d7d7;
-  border-radius:5px;
-}
 
-.entry-nav:active {
-  background-color: #d7d7d7;
-  border-radius:5px;
-}
-
-.entry-nav-new:hover {
-  background-color: #d7d7d7;
-  border-radius:5px;
-}
-
-.active {
-  background-color: #23556F;
-  border-radius:5px;
-  color: #fff;
-}
-
-a:active,a:focus {
-outline: none;
-}
-
-.active:hover {
-  background-color: #23556F;
-  border-radius:5px;
-  color: #fff;
-}
 
 .row {
   max-width: 100%;
