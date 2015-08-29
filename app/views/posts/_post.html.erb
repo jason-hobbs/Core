@@ -1,7 +1,7 @@
 
   <tr data-href= "<%= group_post_path(@group, post) %>">
     <td style="border-left: 5px solid rgb(255, 255, 255);" colspan="2"><%= post.title %></td>
-    <td><%= distance_of_time_in_words(post.created_at, Time.now) %> ago</td>
+    <td><%= time_ago_in_words(post.created_at) %> ago</td>
     <td><span class='<%= post.tag.color %> label radius'><%= post.tag.name %></span></td>
     <td><%= image_tag(post.user.photo.url, size: "25x25", :class => "gravatar") + ' ' + post.user.name %></td>
   </tr>

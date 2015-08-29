@@ -7,7 +7,7 @@
         </div>
         <div data-id="<%= reply.id %>" class="post-entry reply">
           <div class="post-header">
-            <strong><%= reply.user.name %></strong><span class="time"><%= " " + distance_of_time_in_words(reply.created_at, Time.now) + " ago" %></span>
+            <strong><%= reply.user.name %></strong><span class="time"><%= " " + time_ago_in_words(reply.created_at) + " ago" %></span>
             <% if reply.user.name == @user.name %>
               <%= link_to "#{image_tag("pencil2.png", size: "20")}".html_safe, edit_group_post_reply_path(@group, @post, reply), :title => "Edit", :data => { :replyid => reply.id }, :remote => true %> <%= link_to "#{image_tag("cross.png", size: "15")}".html_safe, group_post_reply_path(@group, @post, reply), :title => "Delete", method: :delete, data: { confirm: 'Are you sure?' }, :remote => true %>
             <% end %>
