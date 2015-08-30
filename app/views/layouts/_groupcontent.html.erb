@@ -17,7 +17,7 @@
                 <% else %>
                   <td style="border-left: 5px solid rgb(255, 255, 255);" colspan="2"><%= post.title %></td>
                 <% end %>
-                <td><%= time_ago_in_words(post.created_at) %> ago</td>
+                <td><%= post.created_at.strftime("%d %b %Y %k:%M") %> </td>
                 <td><span class='<%= post.tag.color %> label radius'><%= post.tag.name %></span></td>
                 <td><%= image_tag(post.user.photo.url, size: "25x25", :class => "gravatar") + ' ' + post.user.name %></td>
               </tr>

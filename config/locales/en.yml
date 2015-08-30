@@ -20,6 +20,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  time:
+    formats:
+      post_date: '%e %b'
   datetime:
     distance_in_words:
       half_a_minute: "half a minute"
