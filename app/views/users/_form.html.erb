@@ -44,6 +44,7 @@
 <div class="row left">
   <div class="small-12 columns">
     <%= f.label "Profile Picture", class: "bold" %><br>
+    <%= image_tag @user.photo.url, :class => "gravatar" %><br>
     <%= f.file_field :photo %>
   </div>
 </div>
