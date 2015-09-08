@@ -25,7 +25,9 @@
 <script>
   $(function() {
     $('textarea#editreply').editable({
-      inlineMode: false
+      inlineMode: false,
+      placeholder: 'Type something',
+      buttons: ['bold', 'italic', 'underline', 'fontFamily', 'fontSize', 'color', 'formatBlock', 'blockStyle', 'align', 'insertOrderedList', 'insertUnorderedList', 'outdent', 'indent', 'createLink', 'insertImage', 'insertVideo', 'table', 'undo', 'redo', 'html', 'removeFormat', 'fullscreen'],
     })
   });
 </script>
