@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   root 'groups#show', :id => 'community'
   get 'signin' => 'sessions#new'
+  post 'postupload' => 'posts#upload_file'
+  post 'replyupload' => 'replies#upload_file'
   get 'groupposts/:id', to: 'groups#groupposts', as: 'groupposts'
   resource :session
 

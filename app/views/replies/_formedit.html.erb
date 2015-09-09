@@ -26,6 +26,13 @@
   $(function() {
     $('textarea#editreply').editable({
       inlineMode: false,
+      imageUploadURL: '/replyupload',
+      headers: {
+        'X-CSRF-Token': '<%= form_authenticity_token.to_s %>'
+      },
+      imageUploadParams: {
+        id: 'my_editor'
+      },
       placeholder: 'Type something',
       buttons: ['bold', 'italic', 'underline', 'fontFamily', 'fontSize', 'color', 'formatBlock', 'blockStyle', 'align', 'insertOrderedList', 'insertUnorderedList', 'outdent', 'indent', 'createLink', 'insertImage', 'insertVideo', 'table', 'undo', 'redo', 'html', 'removeFormat', 'fullscreen'],
     })

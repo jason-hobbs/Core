@@ -18,6 +18,19 @@ class PostsController < ApplicationController
   def edit
   end
 
+  def upload_file
+    if params[:file]
+      FileUtils::mkdir_p(Rails.root.join('public/uploads/files'))
+      ext = File.extname(params[:file].original_filename)
+      file_name = "#{SecureRandom.urlsafe_base64}#{ext}"
+      path = Rails.root.join('public/uploads/files/', file_name)
+      File.open(path, "wb") {|f| f.write(params[:file].read)}
+      render :text => {:link => "/uploads/files/#{file_name}"}.to_json
+    else
+      render :text => {:link => nil}.to_json
+    end
+  end
+
   def index
     if @user.groups.find_by(:id=>@group.id)
       #@posts = @group.posts.where('title @@ ? or entry @@ ?', "#{params[:search]}", "#{params[:search]}" ).order('created_at desc').includes(:tag).includes(:user)

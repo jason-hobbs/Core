@@ -3,7 +3,7 @@ class RepliesController < ApplicationController
   before_action :require_signin
   before_action :get_user
   before_action :get_group
-  before_action :get_post
+  before_action :get_post, except: [:upload_file]
   before_action :get_reply, only: [:edit, :update, :show, :destroy]
 
 
@@ -27,6 +27,19 @@ class RepliesController < ApplicationController
 
   def addnewreply
     @reply = Reply.new
+  end
+
+  def upload_file
+    if params[:file]
+      FileUtils::mkdir_p(Rails.root.join('public/uploads/files'))
+      ext = File.extname(params[:file].original_filename)
+      file_name = "#{SecureRandom.urlsafe_base64}#{ext}"
+      path = Rails.root.join('public/uploads/files/', file_name)
+      File.open(path, "wb") {|f| f.write(params[:file].read)}
+      render :text => {:link => "/uploads/files/#{file_name}"}.to_json
+    else
+      render :text => {:link => nil}.to_json
+    end
   end
 
   def update
