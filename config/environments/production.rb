@@ -88,11 +88,11 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.smtp_settings = {
-    address: 'smtp.mandrillapp.com',
+    address: ENV["EMAIL_SERVER"],
     port: 587,
     enable_starttls_auto: true,
-    user_name: 'jason.hobbs@digisanctum.com',
-    password: ENV["MANDRILL_KEY"],
+    user_name: ENV["EMAIL_USER"],
+    password: ENV["EMAIL_PASSWORD"],
     authentication: 'login'
   }
 
