@@ -93,7 +93,7 @@ Rails.application.configure do
     enable_starttls_auto: true,
     user_name: ENV["EMAIL_USER"],
     password: ENV["EMAIL_PASSWORD"],
-    authentication: 'plain',
+    authentication: 'ntlm',
     openssl_verify_mode: 'none'
   }
 

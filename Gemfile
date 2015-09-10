@@ -17,6 +17,7 @@ gem 'foundation-rails'
 gem 'thin'
 gem 'faye'
 gem 'rspec'
+gem 'ruby-ntlm'
 group :development do
   gem 'brakeman', :require => false
   gem 'rack-mini-profiler'
