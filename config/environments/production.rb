@@ -93,7 +93,8 @@ Rails.application.configure do
     enable_starttls_auto: true,
     user_name: ENV["EMAIL_USER"],
     password: ENV["EMAIL_PASSWORD"],
-    authentication: 'login'
+    authentication: 'plain',
+    openssl_verify_mode: 'none'
   }
 
   config.action_mailer.default_url_options = { host: ENV["HOST_DOMAIN"] }
