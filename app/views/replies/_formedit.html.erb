@@ -27,6 +27,7 @@
     $('textarea#editreply').editable({
       inlineMode: false,
       imageUploadURL: '/replyupload',
+      entities: '&#39;',
       headers: {
         'X-CSRF-Token': '<%= form_authenticity_token.to_s %>'
       },
