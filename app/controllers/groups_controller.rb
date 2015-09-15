@@ -17,11 +17,11 @@ class GroupsController < ApplicationController
         @tag = Tag.find_by(name: params[:tag])
         session[:tag] = @tag.id
         @tagname = @tag.name
-        @posts = @group.posts.order(created_at: :desc).where(tag_id: @tag.id).includes(:tag).includes(:user).page(params[:page]).per_page(40)
+        @posts = @group.posts.order(updated_at: :desc).where(tag_id: @tag.id).includes(:tag).includes(:user).page(params[:page]).per_page(40)
       else
         @tagname = 'All'
         session[:tag] = nil
-        @posts = @group.posts.order(created_at: :desc).includes(:tag).includes(:user).page(params[:page]).per_page(40)
+        @posts = @group.posts.order(updated_at: :desc).includes(:tag).includes(:user).page(params[:page]).per_page(40)
       end
       update_visit
     else

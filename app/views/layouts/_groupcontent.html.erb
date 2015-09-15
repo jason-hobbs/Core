@@ -4,21 +4,10 @@
       <table id="postrows">
         <tbody id="posts">
           <% @posts.each do |post| %>
-            <% unless @last_visit.nil? %>
-              <% newcomments = post.replies.where("created_at > ?", @last_visit) %>
-            <% end %>
             <% cache(post) do %>
               <tr data-href= "<%= group_post_path(@group, post) %>">
-                <% if newcomments.nil? %>
-                  <% newcomments = 0 %>
-                <% end %>
-                <% if newcomments.size > 0 %>
-                  <% expire_fragment(post) %>
-                  <td style="border-left: 5px solid rgb(255, 255, 255);" colspan="2"><%= post.title %> <%= image_tag("exclamation2.png", size: "15x15") %></td>
-                <% else %>
-                  <td style="border-left: 5px solid rgb(255, 255, 255);" colspan="2"><%= post.title %></td>
-                <% end %>
-                <td><%= post.created_at.strftime("%d %b %Y %k:%M") %> </td>
+                <td style="border-left: 5px solid rgb(255, 255, 255);" colspan="2"><%= post.title %></td>
+                <td><%= post.updated_at.strftime("%d %b %Y %k:%M") %> </td>
                 <td><span class='<%= post.tag.color %> label radius'><%= post.tag.name %></span></td>
                 <td><%= image_tag(post.user.photo.url, size: "25x25", :class => "gravatar") + ' ' + post.user.name %></td>
               </tr>

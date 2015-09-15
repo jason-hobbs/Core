@@ -33,7 +33,6 @@ class PostsController < ApplicationController
 
   def index
     if @user.groups.find_by(:id=>@group.id)
-      #@posts = @group.posts.where('title @@ ? or entry @@ ?', "#{params[:search]}", "#{params[:search]}" ).order('created_at desc').includes(:tag).includes(:user)
       @posts = @group.posts.text_search(params[:query]).includes(:tag).includes(:user).page(params[:page]).per_page(40)
     else
       redirect_to root_path, :gflash => { :notice => "Not authorized for group" }
@@ -52,12 +51,10 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    #@post.group_id = params[:group_id]
     @post.group_id = @group.id
     @post.user_id = @user.id
     if @post.save
       @group.users.each do |member|
-        #PostMailer.new_post(@group, @post, member).deliver_later
         SendEmailJob.set(wait: 20.seconds).perform_later(@group, @post, member)
       end
       redirect_to group_path(@group), :gflash => { :success => "Posted successfully" }
