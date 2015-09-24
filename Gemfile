@@ -28,7 +28,6 @@ group :development do
 end
 gem 'gritter'
 gem 'bcrypt'
-#gem 'ckeditor', '=4.1.1'
 gem 'font-awesome-rails'
 gem 'wysiwyg-rails'
 gem 'paperclip'
