@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/turbolinks.git
-  revision: eac0a3e43a69b341abdd55ef1bc45d1d4cfaf8a9
+  revision: 83d4b3d2c52a681f07900c28adb28bc8da604733
   specs:
     turbolinks (3.0.0)
       coffee-rails
@@ -58,7 +58,7 @@ GEM
       slim (>= 1.3.6, < 4.0)
       terminal-table (~> 1.4)
     builder (3.2.2)
-    bullet (4.14.7)
+    bullet (4.14.9)
       activesupport (>= 3.0.0)
       uniform_notifier (~> 1.9.0)
     cancan (1.6.10)
@@ -112,7 +112,7 @@ GEM
       websocket-driver (>= 0.5.1)
     font-awesome-rails (4.4.0.0)
       railties (>= 3.2, < 5.0)
-    foundation-rails (5.5.2.1)
+    foundation-rails (5.5.3.2)
       railties (>= 3.1.0)
       sass (>= 3.3.0, < 3.5)
     globalid (0.3.6)
@@ -120,10 +120,10 @@ GEM
     gritter (1.2.0)
     haml (4.0.7)
       tilt
-    highline (1.7.7)
+    highline (1.7.8)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
-    jbuilder (2.3.1)
+    jbuilder (2.3.2)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
     jquery-rails (4.0.5)
@@ -144,7 +144,7 @@ GEM
     mini_portile (0.6.2)
     minitest (5.8.1)
     multi_json (1.11.2)
-    newrelic_rpm (3.13.2.302)
+    newrelic_rpm (3.14.0.305)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     paperclip (4.3.1)
@@ -158,7 +158,7 @@ GEM
       activerecord (>= 3.1)
       activesupport (>= 3.1)
       arel
-    pry (0.10.2)
+    pry (0.10.3)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
@@ -216,7 +216,7 @@ GEM
       sexp_processor (~> 4.0)
     ruby_parser (3.7.1)
       sexp_processor (~> 4.1)
-    sass (3.4.18)
+    sass (3.4.19)
     sass-rails (5.0.4)
       railties (>= 4.0.0, < 5.0)
       sass (~> 3.1)
@@ -232,13 +232,13 @@ GEM
       tilt (>= 1.3.3, < 2.1)
     slop (3.6.0)
     spring (1.4.0)
-    sprockets (3.3.5)
+    sprockets (3.4.0)
       rack (> 1, < 3)
     sprockets-rails (2.3.3)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
-    sqlite3 (1.3.10)
+    sqlite3 (1.3.11)
     temple (0.7.6)
     terminal-table (1.5.2)
     thin (1.6.4)
