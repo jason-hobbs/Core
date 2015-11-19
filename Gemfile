@@ -20,7 +20,7 @@ gem 'rspec'
 gem 'ruby-ntlm'
 group :development do
   gem 'brakeman', :require => false
-  gem 'rack-mini-profiler'
+  #gem 'rack-mini-profiler'
   gem 'traceroute'
   gem 'spring'
   gem 'sqlite3'

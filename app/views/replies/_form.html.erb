@@ -17,18 +17,17 @@
 
 <script>
   $(function() {
-    $('textarea#brandnewreply').editable({
-      inlineMode: false,
+    $('textarea#brandnewreply').froalaEditor({
       imageUploadURL: '/replyupload',
       entities: '&#39;',
-      headers: {
+      requestHeaders: {
         'X-CSRF-Token': '<%= form_authenticity_token.to_s %>'
       },
       imageUploadParams: {
         id: 'my_editor'
       },
-      placeholder: 'Type something',
-      buttons: ['bold', 'italic', 'underline', 'fontFamily', 'fontSize', 'color', 'formatBlock', 'blockStyle', 'align', 'insertOrderedList', 'insertUnorderedList', 'outdent', 'indent', 'createLink', 'insertImage', 'insertVideo', 'table', 'undo', 'redo', 'html', 'removeFormat', 'fullscreen'],
+      placeholderText: 'Type something',
+      toolbarButtons: ['bold', 'italic', 'underline', 'strikeThrough', 'fontFamily', 'fontSize', 'color', 'formatParagraph', 'paragraphStyle', 'align', 'formatOL', 'formatUL', 'outdent', 'indent', 'insertLink', 'insertImage', 'insertVideo', 'insertTable', 'undo', 'redo', 'html', 'clearFormatting', 'fullscreen'],
     })
   });
 </script>

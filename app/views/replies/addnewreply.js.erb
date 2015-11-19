@@ -2,4 +2,4 @@
   $('#replies_<%= @group.id %>_<%= @post.id %>').append("<%= j render partial: 'addnewreply' %>")
 <% end %>
 $('#error_explanation').remove();
-$('#newreply').editable('setHTML', '', false);
+$('#newreply').froalaEditor('setHTML', '', false);
