@@ -46,6 +46,7 @@
   $(function() {
     $('textarea#newreply').froalaEditor({
       imageUploadURL: '/postupload',
+      fileUploadURL: '/postupload',
       entities: '&#39;',
       requestHeaders: {
         'X-CSRF-Token': '<%= form_authenticity_token.to_s %>'
