@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.3.0'
+ruby '2.3.1'
 gem 'rails'
 gem 'dotenv-rails'
 gem 'pg',        group: :production
