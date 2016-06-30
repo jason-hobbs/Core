@@ -17,6 +17,7 @@ gem 'foundation-rails', '=5.5.3.2'
 gem 'thin'
 gem 'faye'
 gem 'rspec'
+gem 'goldiloader'
 gem 'ruby-ntlm'
 group :development do
   gem 'brakeman', :require => false

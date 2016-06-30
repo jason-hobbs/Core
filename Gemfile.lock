@@ -107,6 +107,9 @@ GEM
       sass (>= 3.3.0, < 3.5)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    goldiloader (0.0.10)
+      activerecord (>= 3.2, < 5.1)
+      activesupport (>= 3.2, < 5.1)
     gritter (1.2.0)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
@@ -259,6 +262,7 @@ DEPENDENCIES
   faye
   font-awesome-rails
   foundation-rails (= 5.5.3.2)
+  goldiloader
   gritter
   jbuilder
   jquery-rails
