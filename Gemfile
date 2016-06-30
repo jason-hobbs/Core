@@ -29,7 +29,7 @@ end
 gem 'gritter'
 gem 'bcrypt'
 gem 'font-awesome-rails'
-gem 'wysiwyg-rails'
+gem 'wysiwyg-rails', '=2.3.0'
 gem 'paperclip'
 gem 'jquery-turbolinks'
 gem 'will_paginate'
